@@ -6,7 +6,9 @@ export const Logo = () => {
     <div className="m-16">
       <div className="balloonoya border">
         {siteMetadata.title}
-        <span className="balloon font-semibold">🎈みんな来てね！🎈</span>
+        <span className="balloon font-semibold whitespace-nowrap">
+          🎈みんな来てね！🎈
+        </span>
       </div>
       <style jsx>{`
         .border {
@@ -30,9 +32,9 @@ export const Logo = () => {
           display: none; /* 要素を非表示 */
           padding: 5px 6px; /* テキストの前後の余白 */
           background-color: rgb(233, 250, 228, 0.6); /* 背景色（透明度） */
-          width: 90px; /* 吹き出し全体の幅 */
-          right: -50%; /* 表示位置 */
-          top: 50%;
+          width: 140px; /* 吹き出し全体の幅 */
+          right: -80%; /* 表示位置 */
+          top: 60%;
           font-size: 70%; /* 文字サイズ */
           color: rgb(2, 9, 66);
           box-shadow: 5px 5px 11px rgb(109, 112, 122),
