@@ -1,0 +1,51 @@
+import { Article } from "@/libs/microcms";
+import { formatRichText } from "@/libs/utils";
+import Link from "next/link";
+import { FC } from "react";
+import styles from "./index.module.css";
+
+type Props = {
+  data: Article;
+};
+
+export const ShopArticle: FC<Props> = ({ data }) => {
+  return (
+    <main className={styles.main}>
+      <div className="text-red-900">
+        <div className={styles.card}>
+          <div className={styles.card_overlay}></div>
+          <h1 className={styles.card_inner}>{data.title}</h1>
+          <p className={styles.card_inner2}>{data.taste}</p>
+        </div>
+        <div>
+          <div className={styles.card2}>
+            <div className={styles.card_overlay2}>
+              <picture className="flex flex-col">
+                <source
+                  type="image/webp"
+                  media="(max-width: 640px)"
+                  srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
+                />
+
+                <img
+                  src={data.thumbnail?.url}
+                  alt=""
+                  className={styles.thumbnail}
+                />
+              </picture>
+              <div
+                className="p-3 bg-[#c9c7c7/10]"
+                dangerouslySetInnerHTML={{
+                  __html: `${formatRichText(data.content)}`,
+                }}
+              />
+            </div>
+          </div>
+        </div>
+        <Link href={data.ingtagram} target="_blank" className="text-right">
+          {data.ingtagram.replace("https://www.instagram.com/", "")}
+        </Link>
+      </div>
+    </main>
+  );
+};

@@ -16,7 +16,7 @@ type Tag = {
 // ブログの型定義
 export type Blog = {
   title: string;
-  instagram: string;
+  ingtagram: string;
   taste: string;
   category: Tag[];
   content: string;

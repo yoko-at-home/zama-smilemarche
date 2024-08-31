@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
 
+// tailwind.config.js
+// module.exports = {
+//   plugins: [require("tw-neumorphism")],
+// };
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
