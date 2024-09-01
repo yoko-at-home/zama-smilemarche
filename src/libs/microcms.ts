@@ -8,7 +8,7 @@ import type {
 import { notFound } from "next/navigation";
 
 // タグの型定義
-type Tag = {
+export type Tag = {
   name: string;
 } & MicroCMSContentId &
   MicroCMSDate;
