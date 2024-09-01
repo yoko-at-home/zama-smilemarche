@@ -9,7 +9,7 @@ type Props = {
 export default function ArticleListItem({ article }: Props) {
   return (
     // <div className="">
-    <li className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.card_overlay}></div>
       <Link href={`/shops/${article.id}`}>
         <p className={styles.card_inner}>{article.title}</p>
@@ -34,7 +34,7 @@ export default function ArticleListItem({ article }: Props) {
           </picture>
         )}
       </Link>
-    </li>
+    </div>
     // </div>
   );
 }
