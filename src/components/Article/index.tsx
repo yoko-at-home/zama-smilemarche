@@ -24,17 +24,24 @@ export const ShopArticle: FC<Props> = ({ data }) => {
           <div className={styles.card2}>
             <div className={styles.card_overlay2}>
               <picture className="flex flex-col">
-                <source
-                  type="image/webp"
-                  media="(max-width: 640px)"
-                  srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-                />
-
-                <img
-                  src={data.thumbnail?.url}
-                  alt=""
-                  className={styles.thumbnail}
-                />
+                {!data.thumbnail?.url ? (
+                  <p className="flex justify-center items-center font-black font-serif capitalize text-gray-400 h-36">
+                    no image
+                  </p>
+                ) : (
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 640px)"
+                      srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
+                    />
+                    <img
+                      src={data.thumbnail?.url}
+                      alt=""
+                      className={styles.thumbnail}
+                    />
+                  </picture>
+                )}
               </picture>
               <div
                 className="p-3 bg-[#c9c7c7/10]"

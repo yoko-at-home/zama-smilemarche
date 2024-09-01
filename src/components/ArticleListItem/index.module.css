@@ -11,8 +11,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 15px 5px 15px 5px;
-  width: 270px;
-  height: 350px;
+  width: 200px;
+  height: 280px;
 }
 
 .card_overlay {
@@ -30,12 +30,12 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 250px;
+  width: 190px;
   height: 60px;
   background-color: var(--contrast);
   border-radius: 30px 30px 0 0;
   /* Content style */
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 900;
   color: #aeaaaa;
   text-align: center;
@@ -44,7 +44,7 @@
   z-index: 2;
 }
 .thumbnail {
-  width: 260px;
+  width: 190px;
   height: auto;
   margin-bottom: 64px;
 }
