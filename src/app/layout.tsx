@@ -15,11 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="flex md:flex-row">
-        <NavBarDesktop />
-        <NavBarMobile />
-        <div>{children}</div>
-      </body>
+      <NavBarMobile />
+      <div>{children}</div>
     </html>
   );
 }

@@ -42,7 +42,7 @@ export const NavBarMobile: React.FC<Props> = () => {
 
   return (
     <>
-      <div className="fixed right-5 bottom-28 z-50 rounded px-2 pt-1 xl:right-96">
+      <div className="fixed right-10 bottom-28 z-50 rounded pt-1 xl:right-96">
         <button
           type="button"
           className="mx-1 h-16 w-16 rounded"
@@ -51,7 +51,7 @@ export const NavBarMobile: React.FC<Props> = () => {
         >
           <img
             alt="navigation icon"
-            src="/static/favicon_io/android-chrome-512x512.png"
+            src="/static/favicon_io/android-chrome-512x512.webp"
             className="z-50 w-16 rounded-full md:w-24 bg-white border-2 border-sky-200 animate-pulse"
             width="20px"
             height="20px"
