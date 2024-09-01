@@ -27,11 +27,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const data = await getDetail(params.slug);
 
-  return (
-    <main className="">
-      <div className="">
-        <ShopArticle data={data} />
-      </div>
-    </main>
-  );
+  return <ShopArticle data={data} />;
 }

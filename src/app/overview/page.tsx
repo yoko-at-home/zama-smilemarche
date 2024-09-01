@@ -1,6 +1,6 @@
 import { TitleH2 } from "@/components/ArticleList/TitleH2";
 
-export default function Home() {
+export default function Overview() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex justify-center">
