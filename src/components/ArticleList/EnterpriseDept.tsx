@@ -14,7 +14,6 @@ export const EnterpriseDept = ({ articles }: Props) => {
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
       {articles.map((article) => {
         // category の型が配列でない場合に対処する
-        console.log(`Article ID: ${article.id}`, article.category);
 
         let categoryId: string | undefined;
 
