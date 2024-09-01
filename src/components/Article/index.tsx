@@ -1,8 +1,11 @@
+"use client";
 import { Article } from "@/libs/microcms";
 import { formatRichText } from "@/libs/utils";
 import Link from "next/link";
 import { FC } from "react";
 import styles from "./index.module.css";
+import Lottie from "lottie-react";
+import Instagram from "../icons/instagram.json";
 
 type Props = {
   data: Article;
@@ -42,8 +45,17 @@ export const ShopArticle: FC<Props> = ({ data }) => {
             </div>
           </div>
         </div>
-        <Link href={data.ingtagram} target="_blank" className="text-right">
-          {data.ingtagram.replace("https://www.instagram.com/", "")}
+        <Link href={data.ingtagram} target="_blank">
+          <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
+            <Lottie
+              animationData={Instagram}
+              className="h-12 w-12"
+              loop={true}
+            />
+            {/* <span className="h-6">
+              {data.ingtagram.replace("https://www.instagram.com/", "")}
+            </span> */}
+          </span>
         </Link>
       </div>
     </main>
