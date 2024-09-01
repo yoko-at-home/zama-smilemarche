@@ -53,8 +53,8 @@ export const NavBarMobile: React.FC<Props> = () => {
             alt="navigation icon"
             src="/static/favicon_io/android-chrome-512x512.webp"
             className="z-50 w-16 rounded-full md:w-24 bg-white border-2 border-sky-200 animate-pulse"
-            width="20px"
-            height="20px"
+            width="22px"
+            height="22px"
             loading="lazy"
           />
         </button>

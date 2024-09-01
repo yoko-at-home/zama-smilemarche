@@ -15,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <NavBarMobile />
-      <div>{children}</div>
+      <body>
+        <NavBarMobile />
+        {children}
+      </body>
     </html>
   );
 }
