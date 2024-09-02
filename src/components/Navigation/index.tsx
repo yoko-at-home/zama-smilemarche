@@ -1,37 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import Link from "next/link";
 import { CustomLink } from "./CustomLink";
 import { useState } from "react";
 
 const items = [
-  { href: "/", label: "ホーム" },
-  { href: "/overview", label: "概要" },
-  { href: "/shops", label: "出店者一覧" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Smile" },
+  { href: "/shops", label: "Shops" },
+  { href: "/service", label: "サービス" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
 ];
 
 type Props = {
   className?: string;
   type?: "entrance" | "main";
-};
-
-export const NavBarDesktop: React.FC = () => {
-  return (
-    <nav className="hidden min-h-screen flex-col justify-start text-left sm:flex pl-3">
-      <div className="mt-6 flex flex-col sm:mt-12">
-        {items.map(({ href, label }) => {
-          return (
-            <Link
-              key={href}
-              href={href}
-              className="mb-2 whitespace-nowrap text-2xl font-medium text-gray-400 hover:text-gray-600 lg:text-3xl"
-            >
-              {label}
-            </Link>
-          );
-        })}
-      </div>
-    </nav>
-  );
 };
 
 export const NavBarMobile: React.FC<Props> = () => {
