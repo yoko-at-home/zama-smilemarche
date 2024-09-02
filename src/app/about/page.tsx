@@ -1,4 +1,4 @@
-import { TitleH2 } from "@/components/ArticleList/TitleH2";
+import { TitleH2 } from "@/components/Titles/TitleH2";
 import TimeLineHistory from "@/components/Timeline";
 
 export default function About() {

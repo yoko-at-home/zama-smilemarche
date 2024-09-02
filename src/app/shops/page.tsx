@@ -2,7 +2,7 @@ import { CraftDept } from "@/components/ArticleList/CraftDept";
 import { EnterpriseDept } from "@/components/ArticleList/EnterpriseDept";
 import { FoodDept } from "@/components/ArticleList/FoodDept";
 import { MassageDept } from "@/components/ArticleList/MassageDept";
-import { TitleH2 } from "@/components/ArticleList/TitleH2";
+import { TitleH2 } from "@/components/Titles/TitleH2";
 import { WorkshopDept } from "@/components/ArticleList/WorkshopDept";
 import Pagination from "@/components/Pagination";
 import { LIMIT } from "@/constants";
