@@ -5,7 +5,7 @@ import { TitleH1 } from "@/components/Titles/TitleH1";
 export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center ">
-      <div className="flex justify-center bg-gray-100/90 z-20">
+      <div className="flex justify-center bg-gray-100/90 z-20 mx-3 sm:mx-auto">
         <div
           className="z-0"
           style={{
@@ -24,7 +24,7 @@ export default function About() {
               className="rounded-sm"
             ></video>
           </div>
-          <div className="text-gray-800 font-light  p-5  bg-gray-50/90">
+          <div className="text-gray-800 font-light p-5 bg-gray-50/90">
             <div className="mt-10" />
             <TitleH1 text="概要" />
 
