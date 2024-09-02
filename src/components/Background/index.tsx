@@ -19,6 +19,15 @@ const BackGround = () => {
         <div className="w-[9rem] h-[9rem] absolute bg-gradient-to-tr via-gray-100 from-gray-50 to-white z-10 blur-lg rounded-full animate-[spinIn_80s_linear_infinite]"></div>
         <p className="bg-gradient-to-r from-white to-white shadow-2xl shadow-white brightness-200 contrast-200 rounded-full w-[10rem] h-[10rem]"></p>
       </div>
+
+      {/* <!-- Message --> */}
+      <div className="dark:block w-[10rem] h-[6rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute right-32 bottom-52  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center">
+        今日も・・・・
+        <br />
+        素敵なことが・
+        <br />
+        ありますように
+      </div>
     </div>
   );
 };
