@@ -17,9 +17,7 @@ const BackGround = () => {
         <div className="w-[7rem] h-[7rem] absolute bg-gradient-to-tr via-gray-900 from-black to-gray-900 blur-lg z-30 rounded-full"></div>
         <div className="w-[8rem] h-[8rem] absolute bg-gradient-to-tl via-black/90 from-white to-gray-100 z-20 blur-sm rounded-full"></div>
         <div className="w-[9rem] h-[9rem] absolute bg-gradient-to-tr via-gray-100 from-gray-50 to-white z-10 blur-lg rounded-full animate-[spinIn_80s_linear_infinite]"></div>
-        <p className="bg-gradient-to-r from-white to-white shadow-2xl shadow-white brightness-200 contrast-200 rounded-full w-[10rem] h-[10rem]">
-          <div className="absolute -rotate-[360deg] text-white text-sm font-serif font-semibold"></div>
-        </p>
+        <p className="bg-gradient-to-r from-white to-white shadow-2xl shadow-white brightness-200 contrast-200 rounded-full w-[10rem] h-[10rem]"></p>
       </div>
     </div>
   );

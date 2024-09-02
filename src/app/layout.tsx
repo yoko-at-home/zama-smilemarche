@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body className="font-serif">
         <NavBarMobile />
         {children}
         <Footer />
