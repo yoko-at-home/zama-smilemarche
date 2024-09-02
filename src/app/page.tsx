@@ -40,7 +40,7 @@ export default async function Home() {
         ></div>
       </div>
       <div className="absolute top-96">
-        <TitleH1 text="「第16回Smileマルシェ座間」主催決定！！" />
+        <TitleH1 text="「第16回Smileマルシェ座間」主催！！" />
         <TitleH2 text="参加団体" />
       </div>
     </main>

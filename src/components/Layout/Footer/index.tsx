@@ -1,8 +1,8 @@
 "use client";
 import { siteMetadata } from "@/data/siteMetadata";
 import Lottie from "lottie-react";
-import Facebook from "../icons/facebook.json";
-import Instagram from "../icons/instagram.json";
+import Facebook from "@/components/icons/facebook.json";
+import Instagram from "@/components/icons/instagram.json";
 
 import Link from "next/link";
 
