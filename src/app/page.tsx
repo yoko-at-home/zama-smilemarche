@@ -1,35 +1,49 @@
 import { TitleH2 } from "@/components/ArticleList/TitleH2";
+import Image from "next/image";
+import { CraftDept } from "@/components/ArticleList/CraftDept";
+import { EnterpriseDept } from "@/components/ArticleList/EnterpriseDept";
+import { FoodDept } from "@/components/ArticleList/FoodDept";
+import { MassageDept } from "@/components/ArticleList/MassageDept";
+import { WorkshopDept } from "@/components/ArticleList/WorkshopDept";
+import BackGround from "@/components/Background";
+// import { LIMIT } from "@/constants";
+// import { getList } from "@/libs/microcms";
 
-export default function Home() {
+// export const revalidate = 60;
+
+export default async function Home() {
+  // const data = await getList({
+  //   limit: LIMIT,
+  // });
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className="flex justify-center">
-        <div
-          className=""
-          style={{
-            backgroundImage:
-              "url('/static/img/marche/Smile blissロゴ(透過).png')",
-          }}
-        >
-          <div className="bg-gray-50 p-4 shadow-sm rounded-sm drop-shadow-sm">
-            <video
-              loop
-              autoPlay
-              muted
-              // controls
-              width="screen"
-              src="/static/img/yatoyama/yatoyama.mov"
-              className="rounded-sm"
-            ></video>
-          </div>
-          <div className="text-gray-600 bg-gray-50/80 p-5 mt-5">
+    <main className="">
+      <div className="relative">
+        <div className="relative  p-4 shadow-sm rounded-sm drop-shadow-sm w-screen h-96">
+          <Image
+            src="/static/img/marche/event-caravan.png"
+            alt={"zama smile march"}
+            fill
+          />
+        </div>
+        <BackGround />
+        <div className="absolute top-0 left-2">
+          <div className="text-cyan-800  p-5 mb-32 font-serif">
+            <Image
+              alt="con"
+              src="/static/img/marche/Smile blissロゴ(黄).webp"
+              className="rounded-full"
+              loading="lazy"
+              width={130}
+              height={130}
+            />
+            <div className="mt-96" />
             <TitleH2 text="概要" />
-            <p className="pt-10 font-light">
+            <p className="pt-10 font-light ">
               ≪理念≫
               手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、
               地元活性の一助となるように地域に根ざした活動をします。
             </p>
-            <p className="pt-5">
+            <p className="pt-5 font-light">
               ≪団体設立の経緯≫ Smile
               blissは、海老名市、綾瀬市、相模原市、町田市などで開催されているハンドメイドイベントに作家として参加し、沢山の作家さんに出会ってきました。
               その経験から、作家さんもお客様も座間の方がとても多いことに驚き、また座間市にハンドメイドイベントが無いことを残念に思っている声も多く聞きました。
@@ -38,6 +52,15 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center ">
+        <div
+          className="bg-cover bg-bottom z-10"
+          style={{
+            backgroundImage:
+              "url('/static/img/marche/Smile blissロゴ(透過).png')",
+          }}
+        ></div>
       </div>
     </main>
   );
