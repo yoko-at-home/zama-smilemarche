@@ -1,4 +1,4 @@
-const BackGround = () => {
+const BackGroundWithMessage = () => {
   return (
     <div className="w-full h-screen bg-gradient-to-tl via-emerald-700/30 from-yellow-200/40 to-white dark:bg-gradient-to-tr dark:from-black dark:to-gray-600">
       {/* <!-- SUN --> */}
@@ -20,9 +20,20 @@ const BackGround = () => {
         <p className="bg-gradient-to-r from-white to-white shadow-2xl shadow-white brightness-200 contrast-200 rounded-full w-[10rem] h-[10rem]"></p>
       </div>
 
-
+      {/* <!-- Message1 --> */}
+      <div className="dark:block w-[10rem] h-[6rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute right-32 bottom-52  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center">
+        今日も・・・・
+        <br />
+        素敵なことが・
+        <br />
+        ありますように
+      </div>
+      {/* <!-- Message2 --> */}
+      <div className="dark:block w-[10rem] h-[6rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute left-32 top-60  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center animate-pulse">
+        ♪　ページ準備中　♪
+      </div>
     </div>
   );
 };
 
-export default BackGround;
+export default BackGroundWithMessage;

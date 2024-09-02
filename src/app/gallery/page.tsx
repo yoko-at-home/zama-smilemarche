@@ -1,10 +1,9 @@
-import BackGround from "@/components/Background";
+import BackGroundWithMessage from "@/components/Background/WMessage";
 
 const GalleryPage = () => {
   return (
     <div>
-      GalleryPage
-      <BackGround />
+      <BackGroundWithMessage />
     </div>
   );
 };
