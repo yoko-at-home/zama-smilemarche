@@ -1,6 +1,7 @@
 import { TitleH2 } from "@/components/ArticleList/TitleH2";
+import TimeLineHistory from "@/components/Timeline";
 
-export default function Overview() {
+export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex justify-center">
@@ -36,6 +37,9 @@ export default function Overview() {
               「私たちと同じ想いの方がいるのであれば、個々の力は小さくても、それがひとつになり大きな力になれば出来ないことは無い！」
               「ハンドメイドで座間をもっと盛り上げたい！」と想い座間で活動している作家さんを中心にハンドメイドイベントを始めました。
             </p>
+          </div>
+          <div className="flex justify-center mx-3">
+            <TimeLineHistory />
           </div>
         </div>
       </div>
