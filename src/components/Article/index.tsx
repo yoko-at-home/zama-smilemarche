@@ -25,7 +25,7 @@ export const ShopArticle: FC<Props> = ({ data }) => {
             <div className={styles.card_overlay2}>
               <picture className="flex flex-col">
                 {!data.thumbnail?.url ? (
-                  <p className="flex justify-center items-center font-black font-serif capitalize text-gray-400 h-36">
+                  <p className="flex justify-center items-center font-black  capitalize text-gray-400 h-36">
                     no image
                   </p>
                 ) : (

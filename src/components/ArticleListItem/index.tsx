@@ -16,7 +16,7 @@ export default function ArticleListItem({ article }: Props) {
       </Link>
       <Link href={`/shops/${article.id}`}>
         {!article.thumbnail?.url ? (
-          <p className="flex justify-center items-center font-black font-serif capitalize text-gray-400 h-36">
+          <p className="flex justify-center items-center font-black  capitalize text-gray-400 h-36">
             no image
           </p>
         ) : (
