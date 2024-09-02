@@ -1,0 +1,6 @@
+.boxTimeLineHistory {
+  border-radius: 2px;
+  background: #e0e0e0;
+  box-shadow: inset 30px 30px 51px #a8a8a8, inset -30px -30px 51px #ffffff;
+  margin:10px 5px 10px 5px;
+}
