@@ -7,7 +7,7 @@ const items = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Smile" },
   { href: "/shops", label: "Shops" },
-  { href: "/service", label: "サービス" },
+  { href: "/service", label: "Service" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
