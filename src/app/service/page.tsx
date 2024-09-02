@@ -1,10 +1,10 @@
-import BackGround from "@/components/Background";
+import BackGroundWithMessage from "@/components/Background/WMessage";
 
 const ServicePage = () => {
   return (
     <div>
       ServicePage
-      <BackGround />
+      <BackGroundWithMessage />
     </div>
   );
 };

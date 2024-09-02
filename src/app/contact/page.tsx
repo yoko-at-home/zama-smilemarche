@@ -1,9 +1,9 @@
-import BackGround from "@/components/Background";
+import BackGroundWithMessage from "@/components/Background/WMessage";
 
 const ContactPage = () => {
   return (
     <div>
-      <BackGround />
+      <BackGroundWithMessage />
     </div>
   );
 };
