@@ -3,7 +3,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 import Lottie from "lottie-react";
 import Facebook from "@/components/icons/facebook.json";
 import Instagram from "@/components/icons/instagram.json";
-
+import Mail from "@/components/icons/mail.json";
 import Link from "next/link";
 
 const Footer = () => {
@@ -34,6 +34,9 @@ const Footer = () => {
         <Link href={siteMetadata.facebook} target="_blank">
           <Lottie animationData={Facebook} className="h-12 w-12" loop={true} />
         </Link>
+        <a href={`mailto:${siteMetadata.email}`} title="Email">
+          <Lottie animationData={Mail} className="h-12 w-12" loop />
+        </a>
         <Link href={siteMetadata.instagram} target="_blank">
           <Lottie animationData={Instagram} className="h-12 w-12" loop={true} />
         </Link>
