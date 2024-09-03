@@ -1,0 +1,9 @@
+.border {
+  background: linear-gradient(145deg, #ffffff, #c7c9cc);
+  border-radius: 1%;
+  box-shadow: inset 7.51px 7.51px 34px #a8a9ac,
+    inset -7.51px -7.51px 34px #ffffff;
+    padding: 10px 3px 16px 3px;
+    margin-left: auto;
+margin-right: auto;
+}
