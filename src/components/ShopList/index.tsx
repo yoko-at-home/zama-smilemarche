@@ -1,7 +1,7 @@
-import ArticleListItem from "../ArticleListItem";
+import ShopListItem from "../ShopListItem";
 import { Props } from "./types";
 
-export default function ArticleList({ articles }: Props) {
+export default function ShopList({ articles }: Props) {
   if (!articles) {
     return null;
   }
@@ -11,7 +11,7 @@ export default function ArticleList({ articles }: Props) {
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
       {articles.map((article) => (
-        <ArticleListItem key={article.id} article={article} />
+        <ShopListItem key={article.id} article={article} />
       ))}
     </ul>
   );

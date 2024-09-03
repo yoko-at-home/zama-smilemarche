@@ -1,5 +1,5 @@
 import { Tag } from "@/libs/microcms";
-import ArticleListItem from "../ArticleListItem";
+import ShopListItem from "../ShopListItem";
 import { Props } from "./types";
 
 export const EnterpriseDept = ({ articles }: Props) => {
@@ -35,7 +35,7 @@ export const EnterpriseDept = ({ articles }: Props) => {
         if (categoryId === "enterprise") {
           return (
             <li key={article.id} className="category-craft">
-              <ArticleListItem article={article} />
+              <ShopListItem article={article} />
             </li>
           );
         }

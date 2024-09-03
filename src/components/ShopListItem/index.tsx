@@ -6,7 +6,7 @@ type Props = {
   article: Article;
 };
 
-export default function ArticleListItem({ article }: Props) {
+export default function ShopListItem({ article }: Props) {
   return (
     // <div className="">
     <div className={styles.card}>

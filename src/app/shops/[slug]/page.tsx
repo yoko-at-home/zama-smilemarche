@@ -1,4 +1,4 @@
-import { ShopArticle } from "@/components/Article";
+import { Shop } from "@/components/Shop";
 import SmileMarcheImage from "@/components/Layout/Header/SmileMarchImage";
 import { getDetail } from "@/libs/microcms";
 import { Metadata } from "next";
@@ -31,7 +31,7 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <SmileMarcheImage />
-      <ShopArticle data={data} />;
+      <Shop data={data} />;
     </>
   );
 }

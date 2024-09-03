@@ -1,9 +1,9 @@
-import { CraftDept } from "@/components/ArticleList/CraftDept";
-import { EnterpriseDept } from "@/components/ArticleList/EnterpriseDept";
-import { FoodDept } from "@/components/ArticleList/FoodDept";
-import { MassageDept } from "@/components/ArticleList/MassageDept";
+import { CraftDept } from "@/components/ShopList/CraftDept";
+import { EnterpriseDept } from "@/components/ShopList/EnterpriseDept";
+import { FoodDept } from "@/components/ShopList/FoodDept";
+import { MassageDept } from "@/components/ShopList/MassageDept";
 import { TitleH2 } from "@/components/Titles/TitleH2";
-import { WorkshopDept } from "@/components/ArticleList/WorkshopDept";
+import { WorkshopDept } from "@/components/ShopList/WorkshopDept";
 import { LIMIT } from "@/constants";
 import { getList } from "@/libs/microcms";
 import { TitleH1 } from "@/components/Titles/TitleH1";

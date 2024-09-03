@@ -11,7 +11,7 @@ type Props = {
   data: Article;
 };
 
-export const ShopArticle: FC<Props> = ({ data }) => {
+export const Shop: FC<Props> = ({ data }) => {
   return (
     <main className={styles.main}>
       <div className="text-red-900 mt-16">

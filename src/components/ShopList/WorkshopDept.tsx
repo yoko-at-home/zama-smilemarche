@@ -1,8 +1,11 @@
-import { Tag } from "@/libs/microcms";
-import ArticleListItem from "../ArticleListItem";
-import { Props } from "./types";
+import { Article, Tag } from "@/libs/microcms";
+import ShopListItem from "../ShopListItem";
 
-export const FoodDept = ({ articles }: Props) => {
+type Props = {
+  articles?: Article[];
+};
+
+export const WorkshopDept = ({ articles }: Props) => {
   if (!articles) {
     return null;
   }
@@ -32,10 +35,10 @@ export const FoodDept = ({ articles }: Props) => {
         }
 
         // 条件分岐の開始
-        if (categoryId === "food") {
+        if (categoryId === "workshop") {
           return (
             <li key={article.id} className="category-craft">
-              <ArticleListItem article={article} />
+              <ShopListItem article={article} />
             </li>
           );
         }
