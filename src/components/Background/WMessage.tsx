@@ -21,16 +21,18 @@ const BackGroundWithMessage = () => {
       </div>
 
       {/* <!-- Message1 --> */}
-      <div className="dark:block w-[10rem] h-[6rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute right-32 bottom-52  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center">
-        今日も・・・・
-        <br />
-        素敵なことが・
-        <br />
-        ありますように
+      <div className="dark:block w-[10rem] h-[5rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute right-32 bottom-52  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center">
+        <p className="p-1">
+          今日も、明日も
+          <br />
+          素敵なことが
+          <br />
+          ありますように💫
+        </p>
       </div>
       {/* <!-- Message2 --> */}
-      <div className="dark:block w-[10rem] h-[6rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute left-32 top-60  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center animate-pulse">
-        ♪　ページ準備中　♪
+      <div className="dark:block w-[10rem] h-[2rem] rounded-sm shadow-2xl shadow-gray-400 grid place-items-center absolute left-32 top-80  cursor-pointer [transition:all_400ms_ease] hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] text-gray-500 dark:text-gray-100 bg-gray-50/50 dark:bg-gray-500/50 text-center">
+        <p className="p-1">ページ準備中🌛</p>
       </div>
     </div>
   );
