@@ -14,7 +14,7 @@ type Props = {
 export const ShopArticle: FC<Props> = ({ data }) => {
   return (
     <main className={styles.main}>
-      <div className="text-red-900">
+      <div className="text-red-900 mt-16">
         <div className={styles.card}>
           <div className={styles.card_overlay}></div>
           <h1 className={styles.card_inner}>{data.title}</h1>

@@ -1,8 +1,8 @@
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import { TitleH2 } from "@/components/Titles/TitleH2";
-import Image from "next/image";
 import { LIMIT } from "@/constants";
 import { getList } from "@/libs/microcms";
+import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 
 // export const revalidate = 60;
 
@@ -19,16 +19,7 @@ export default async function Home() {
             backgroundImage: "url('/static/img/marche/event-top.webp",
           }}
         />
-        <div className="absolute top-5 left-2">
-          <Image
-            alt="con"
-            src="/static/img/marche/Smile blissロゴ(黄).webp"
-            className="rounded-full"
-            loading="lazy"
-            width={130}
-            height={130}
-          />
-        </div>
+        <SmileBlissImage />
       </div>
       <div className="flex justify-center ">
         <div

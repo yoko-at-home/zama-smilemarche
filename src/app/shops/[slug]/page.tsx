@@ -1,4 +1,5 @@
 import { ShopArticle } from "@/components/Article";
+import SmileMarcheImage from "@/components/Layout/Header/SmileMarchImage";
 import { getDetail } from "@/libs/microcms";
 import { Metadata } from "next";
 
@@ -27,5 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const data = await getDetail(params.slug);
 
-  return <ShopArticle data={data} />;
+  return (
+    <>
+      <SmileMarcheImage />
+      <ShopArticle data={data} />;
+    </>
+  );
 }
