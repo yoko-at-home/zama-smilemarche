@@ -5,8 +5,12 @@ import { getList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
 import TimeLineHistory from "@/components/Timeline";
-import ShopListItem from "@/components/ShopListItem";
-import ShopList from "@/components/ShopList";
+import ShopNameList from "@/components/ShopNameList";
+import { WorkshopDept } from "@/components/ShopNameList/WorkshopDept";
+import { CraftDept } from "@/components/ShopNameList/CraftDept";
+import { FoodDept } from "@/components/ShopNameList/FoodDept";
+import { EnterpriseDept } from "@/components/ShopNameList/EnterpriseDept";
+import { MassageDept } from "@/components/ShopNameList/MassageDept";
 export const revalidate = 60;
 
 export default async function Home() {
@@ -28,18 +32,45 @@ export default async function Home() {
       <div className="mx-3 p-3 sm:px-6 sm:mx-auto">
         <TitleH1 text="「第16回Smileマルシェ座間」主催！！" />
         <div className={styles.border}>
-          {" "}
-          <div className="sm:p-6"></div>
+          <div className="m-3 p-3 sm:p-6"></div>
         </div>
         <TitleH2 text="参加団体" />
         <div className={styles.border}>
-          <div className="sm:p-6 overflow-scroll">
-            <ShopList articles={data.contents} />
+          <div className="flex flex-col items-center justify-center overflow-scroll">
+            <ShopNameList articles={data.contents} />
+          </div>
+          <div className="flex flex-col items-center justify-center sm:p-6">
+            <div className={styles.box}>
+              <TitleH1 text="部門別" />
+
+              <div className="">
+                <TitleH2 text="Workshop" />
+                <WorkshopDept articles={data.contents} />
+              </div>
+              <div className="">
+                <TitleH2 text="Craft" />
+                <CraftDept articles={data.contents} />
+              </div>
+              <div className="">
+                <TitleH2 text="Food" />
+                <FoodDept articles={data.contents} />
+              </div>
+              <div className="">
+                <TitleH2 text="Others" />
+
+                <EnterpriseDept articles={data.contents} />
+              </div>
+              <div className="">
+                <TitleH2 text="Enterprise" />
+
+                <MassageDept articles={data.contents} />
+              </div>
+            </div>
           </div>
         </div>
         <TitleH1 text="smile座間の想い" />
         <div className={styles.border}>
-          <div className="sm:p-6">
+          <div className="m-3 p-3 sm:p-6">
             <p className="mb-3">
               Smile座間は、ハンドメイド作家として活動していく中でたくさんの作家さんと出会い、「ハンドメイドで座間をもっと盛り上げたい！」と想い、座間で活動している作家を中心に販売イベントを始めました。
             </p>
@@ -58,7 +89,7 @@ export default async function Home() {
         </div>
         <TitleH2 text="ボランティア募集" />
         <div className={styles.border}>
-          <div className="sm:p-6">
+          <div className="m-3 p-3 sm:p-6">
             Smile Marcheは次のようなボランティアを募集しています。
             <ol className="list-[square]">
               <li className="ml-3">A</li>
@@ -71,7 +102,7 @@ export default async function Home() {
         <TitleH2 text="協力会社、協賛企業の紹介" />
 
         <div className={styles.border}>
-          <div className="sm:p-6">
+          <div className="m-3 p-3 sm:p-6">
             Smile Marcheは次の企業さまからご支援をいただいています。
             <ol className="list-[square]">
               <li className="ml-3">A</li>

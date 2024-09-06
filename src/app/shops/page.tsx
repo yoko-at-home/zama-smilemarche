@@ -1,4 +1,3 @@
-import { CraftDept } from "@/components/ShopList/CraftDept";
 import { EnterpriseDept } from "@/components/ShopList/EnterpriseDept";
 import { FoodDept } from "@/components/ShopList/FoodDept";
 import { MassageDept } from "@/components/ShopList/MassageDept";
@@ -9,6 +8,7 @@ import { getList } from "@/libs/microcms";
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import styles from "./index.module.css";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
+import { CraftDept } from "@/components/ShopList/CraftDept";
 
 export const revalidate = 60;
 
