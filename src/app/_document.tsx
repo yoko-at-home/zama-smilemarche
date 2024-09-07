@@ -11,7 +11,7 @@ class MyDocument extends Document {
           <meta property="og:site_name" content={siteMetadata.siteUrl} />
           <meta property="og:description" content={siteMetadata.description} />
           <meta property="og:title" content={siteMetadata.author} />
-          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content={siteMetadata.ogImage} />
           <meta name="twitter:title" content={siteMetadata.author} />
           <meta name="twitter:description" content={siteMetadata.description} />
         </Head>
