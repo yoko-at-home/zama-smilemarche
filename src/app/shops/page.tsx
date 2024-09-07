@@ -9,6 +9,7 @@ import { TitleH1 } from "@/components/Titles/TitleH1";
 import styles from "./index.module.css";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import { CraftDept } from "@/components/ShopList/CraftDept";
+import { Logo } from "@/components/logo";
 
 export const revalidate = 60;
 
@@ -19,6 +20,7 @@ export default async function Shops() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center py-24">
       <SmileBlissImage />
+      <Logo />
 
       <div className={styles.box}>
         <TitleH1 text="出店者リスト" />
@@ -46,6 +48,7 @@ export default async function Shops() {
           <MassageDept articles={data.contents} />
         </div>
       </div>
+      <Logo />
       {/* <Pagination totalCount={data.totalCount} /> */}
     </main>
   );
