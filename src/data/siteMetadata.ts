@@ -15,4 +15,5 @@ export const siteMetadata = {
   facebook: "https://www.facebook.com/smilebliss.zama",
   instagram: "https://www.instagram.com/smile.hm.zama",
   locale: "ja-JP",
+  keywords: "",
 };
