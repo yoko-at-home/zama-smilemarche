@@ -35,11 +35,7 @@ export const WorkshopDept = ({ articles }: Props) => {
 
         // 条件分岐の開始
         if (categoryId === "workshop") {
-          return (
-            <li key={article.id} className="">
-              <ShopNameListItem article={article} />
-            </li>
-          );
+          return <ShopNameListItem article={article} key={article.id} />;
         }
       })}
     </ul>

@@ -33,11 +33,7 @@ export const FoodDept = ({ articles }: Props) => {
 
         // 条件分岐の開始
         if (categoryId === "food") {
-          return (
-            <li key={article.id} className="category-craft">
-              <ShopNameListItem article={article} />
-            </li>
-          );
+          return <ShopNameListItem article={article} key={article.id} />;
         }
       })}
     </ul>
