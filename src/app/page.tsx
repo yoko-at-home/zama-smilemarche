@@ -36,7 +36,7 @@ export default async function Home() {
         </div>
         <TitleH2 text="参加団体" />
         <div className={styles.border}>
-          <div className="flex flex-col items-center justify-center overflow-scroll">
+          <div className="flex flex-row items-center justify-center">
             <ShopNameList articles={data.contents} />
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
