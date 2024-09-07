@@ -42,10 +42,10 @@ const Footer = () => {
         </Link>
       </div>
       <div className="mb-2 flex space-x-2 text-sm text-gray-700">
-        <p>
+        <Link href={siteMetadata.HP} target="_blank">
           {siteMetadata.author}&nbsp;&copy;
           {`${new Date().getFullYear()}`}
-        </p>
+        </Link>
       </div>
     </footer>
   );

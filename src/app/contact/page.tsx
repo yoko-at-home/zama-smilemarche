@@ -1,9 +1,12 @@
-import BackGroundWithMessage from "@/components/Background/WMessage";
+import BackGround from "@/components/Background/";
 
 const ContactPage = () => {
   return (
-    <div>
-      <BackGroundWithMessage />
+    <div className="relative">
+      <div className="absolute top-1/2 right-1/2 pl-10">
+        お問い合わせは、ページ下のSNSまたはメールにて承ります
+      </div>
+      <BackGround />
     </div>
   );
 };
