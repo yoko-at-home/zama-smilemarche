@@ -1,5 +1,6 @@
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { TitleH1 } from "@/components/Titles/TitleH1";
+import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
               "url('/static/img/marche/Smile blissロゴ(透過).png')",
           }}
         >
-          <div className="bg-gray-50 p-4 shadow-sm rounded-sm drop-shadow-sm">
+          <div className="relative bg-gray-50 shadow-sm rounded-sm drop-shadow-sm">
             <video
               loop
               autoPlay
@@ -22,6 +23,7 @@ export default function About() {
               src="/static/img/yatoyama/yatoyama.mov"
               className="rounded-sm"
             ></video>
+            <SmileBlissImage />
           </div>
           <div className="text-gray-800 font-light p-5 bg-gray-50/90">
             <div className="mt-10" />
