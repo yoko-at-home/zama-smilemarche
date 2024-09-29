@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { LIMIT } from "@/constants";
@@ -107,6 +108,17 @@ export default async function Home() {
               <li className="ml-3">D</li>
             </ol>
           </div>
+        </div>
+        <div className="py-10 flex justify-center items-center">
+          お客様専用公式LINE：
+          <a href="https://lin.ee/ebfIoUC" target="_blank">
+            <img
+              src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+              alt="友だち追加"
+              width="100"
+              height="100"
+            />
+          </a>
         </div>
       </div>
     </main>

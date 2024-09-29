@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { EnterpriseDept } from "@/components/ShopList/EnterpriseDept";
 import { FoodDept } from "@/components/ShopList/FoodDept";
 import { MassageDept } from "@/components/ShopList/MassageDept";
@@ -48,7 +50,18 @@ export default async function Shops() {
           <MassageDept articles={data.contents} />
         </div>
       </div>
-      <Logo />
+      <div className="py-10 flex justify-center items-center">
+        出店者専用公式LINE：
+        <a href="https://line.me/R/ti/p/u0Ir6bv" target="_blank">
+          <img
+            src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+            alt="友だち追加"
+            width="100"
+            height="100"
+          />
+        </a>
+      </div>
+
       {/* <Pagination totalCount={data.totalCount} /> */}
     </main>
   );
