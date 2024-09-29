@@ -41,7 +41,7 @@ export default async function Home() {
             <ShopNameList articles={data.contents} />
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
-            <div className={styles.box}>
+            <div className="px-3">
               <TitleH1 text="部門別" />
 
               <div className="">
