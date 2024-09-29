@@ -59,9 +59,9 @@ export const Shop: FC<Props> = ({ data }) => {
               className="h-12 w-12"
               loop={true}
             />
-            {/* <span className="h-6">
+            <span className="h-6 break-words">
               {data.ingtagram.replace("https://www.instagram.com/", "")}
-            </span> */}
+            </span>
           </span>
         </Link>
       </div>
