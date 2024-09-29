@@ -1,6 +1,7 @@
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
+import TimeLineHistory from "@/components/Timeline";
 
 export default function About() {
   return (
@@ -43,6 +44,9 @@ export default function About() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="">
+        <TimeLineHistory />
       </div>
     </main>
   );

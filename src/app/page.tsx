@@ -4,7 +4,6 @@ import { LIMIT } from "@/constants";
 import { getList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
-import TimeLineHistory from "@/components/Timeline";
 import ShopNameList from "@/components/ShopNameList";
 import { WorkshopDept } from "@/components/ShopNameList/WorkshopDept";
 import { CraftDept } from "@/components/ShopNameList/CraftDept";
@@ -32,7 +31,7 @@ export default async function Home() {
       <div className="mx-3 p-3 sm:px-6 sm:mx-auto">
         <TitleH1 text="「第16回Smileマルシェ座間」主催！！" />
         <div className={styles.border}>
-          <div className="m-3 p-3 sm:p-6"></div>
+          <div className="m-3 p-3 sm:p-6">11月24日（日）</div>
         </div>
         <TitleH2 text="参加団体" />
         <div className={styles.border}>
@@ -111,10 +110,6 @@ export default async function Home() {
               <li className="ml-3">D</li>
             </ol>
           </div>
-        </div>
-
-        <div className="flex justify-center mx-6">
-          <TimeLineHistory />
         </div>
       </div>
     </main>
