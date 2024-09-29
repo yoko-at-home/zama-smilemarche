@@ -11,6 +11,7 @@ import { CraftDept } from "@/components/ShopNameList/CraftDept";
 import { FoodDept } from "@/components/ShopNameList/FoodDept";
 import { EnterpriseDept } from "@/components/ShopNameList/EnterpriseDept";
 import { MassageDept } from "@/components/ShopNameList/MassageDept";
+import { KitchenCar } from "@/components/ShopList/KitchenCar";
 export const revalidate = 60;
 
 export default async function Home() {
@@ -44,6 +45,10 @@ export default async function Home() {
               <TitleH1 text="部門別" />
 
               <div className="">
+                <TitleH2 text="Kitchen Car" />
+                <KitchenCar articles={data.contents} />
+              </div>
+              <div className="">
                 <TitleH2 text="Workshop" />
                 <WorkshopDept articles={data.contents} />
               </div>
@@ -57,11 +62,10 @@ export default async function Home() {
               </div>
               <div className="">
                 <TitleH2 text="Others" />
-
-                <EnterpriseDept articles={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Enterprise" />
+                <EnterpriseDept articles={data.contents} />
 
                 <MassageDept articles={data.contents} />
               </div>
@@ -99,7 +103,7 @@ export default async function Home() {
         <TitleH2 text="協力会社、協賛企業の紹介" />
 
         <div className={styles.border}>
-          <div className="m-3 p-3 sm:p-6">
+          <div className="m-3 p-3 sm:p-6 leading-loose">
             Smile Marcheは次の企業さまからご支援をいただいています。
             <ol className="list-[square]">
               <li className="ml-3">A</li>
