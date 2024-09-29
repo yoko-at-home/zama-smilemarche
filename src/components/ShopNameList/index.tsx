@@ -1,5 +1,5 @@
 "use client";
-import ShopNameListItem from "../ShopNameListItem";
+import ShopNameListItemAutoScroll from "../ShopNameListItemAutoScroll";
 import { Props } from "./types";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -14,17 +14,17 @@ export default function ShopNameList({ articles }: Props) {
     drag: false,
     created(s) {
       if (s.track?.details) {
-        s.moveToIdx(5, true, animation);
+        s.moveToIdx(1, true, animation);
       }
     },
     updated(s) {
       if (s.track?.details) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation);
+        s.moveToIdx(s.track.details.abs + 1, true, animation);
       }
     },
     animationEnded(s) {
       if (s.track?.details && s.track.details.abs !== null) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation);
+        s.moveToIdx(s.track.details.abs + 1, true, animation);
       }
     },
   });
@@ -36,7 +36,7 @@ export default function ShopNameList({ articles }: Props) {
         if (slider.current && slider.current.track?.details) {
           slider.current.next();
         }
-      }, 5000); // 5秒ごとに次のスライドに移動
+      }, 10000); // 5秒ごとに次のスライドに移動
 
       // コンポーネントがアンマウントされる際にタイマーをクリア
       return () => clearInterval(timer);
@@ -53,7 +53,7 @@ export default function ShopNameList({ articles }: Props) {
   return (
     <ul ref={sliderRef} className="keen-slider">
       {articles.map((article) => (
-        <ShopNameListItem key={article.id} article={article} />
+        <ShopNameListItemAutoScroll key={article.id} article={article} />
       ))}
     </ul>
   );
