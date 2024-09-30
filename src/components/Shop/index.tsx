@@ -59,7 +59,7 @@ export const Shop: FC<Props> = ({ data }) => {
               className="h-12 w-12"
               loop={true}
             />
-            <span className="h-6 overflow-x-scroll w-[200px]">
+            <span className="flex justify-start h-6 overflow-x-scroll w-[200px]">
               {data.ingtagram.replace("https://www.instagram.com/", "")}
             </span>
           </span>
