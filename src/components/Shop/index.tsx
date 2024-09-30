@@ -65,6 +65,40 @@ export const Shop: FC<Props> = ({ data }) => {
           </span>
         </Link>
       </div>
+      <div className="flex flex-col justify-center md:flex-row md:justify-around">
+        <div className="flex flex-col md:pr-3">
+          {!data.picture1?.url ? null : (
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 640px)"
+                srcSet={`${data.picture1?.url}?fm=webp&w=414 1x, ${data.picture1?.url}?fm=webp&w=414&dpr=2 2x`}
+              />
+              <img
+                src={data.picture1?.url}
+                alt=""
+                className={styles.thumbnail}
+              />
+            </picture>
+          )}
+        </div>
+        <div className="flex flex-col">
+          {!data.picture2?.url ? null : (
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 640px)"
+                srcSet={`${data.picture2?.url}?fm=webp&w=414 1x, ${data.picture2?.url}?fm=webp&w=414&dpr=2 2x`}
+              />
+              <img
+                src={data.picture2?.url}
+                alt=""
+                className={styles.thumbnail}
+              />
+            </picture>
+          )}
+        </div>
+      </div>
     </main>
   );
 };

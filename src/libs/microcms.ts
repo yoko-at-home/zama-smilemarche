@@ -21,6 +21,8 @@ export type Blog = {
   category: Tag[];
   content: string;
   thumbnail?: MicroCMSImage;
+  picture1?: MicroCMSImage;
+  picture2?: MicroCMSImage;
 };
 
 export type Article = Blog & MicroCMSContentId & MicroCMSDate;

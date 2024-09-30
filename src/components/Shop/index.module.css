@@ -65,7 +65,7 @@
   background-repeat: no-repeat;
   margin: 0;
   width: 350px;
-  height: 950px;
+  height: 800px;
 }
 
 
@@ -95,6 +95,11 @@
 }
 .thumbnail {
   width: 330px;
+  height: auto;
+  margin-bottom: 25px;
+}
+.picture {
+  width: 300px;
   height: auto;
   margin-bottom: 25px;
 }
