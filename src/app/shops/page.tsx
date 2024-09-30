@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { EnterpriseDept } from "@/components/ShopList/EnterpriseDept";
 import { FoodDept } from "@/components/ShopList/FoodDept";
 import { MassageDept } from "@/components/ShopList/MassageDept";
@@ -55,7 +53,6 @@ export default async function Shops() {
           <MassageDept articles={data.contents} />
         </div>
       </div>
-      {/* <Pagination totalCount={data.totalCount} /> */}
     </main>
   );
 }
