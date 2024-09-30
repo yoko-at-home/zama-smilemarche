@@ -23,7 +23,7 @@ export const Shop: FC<Props> = ({ data }) => {
         <div>
           <div className={styles.card2}>
             <div className={styles.card_overlay2}>
-              <picture className="flex flex-col">
+              <div className="flex flex-col">
                 {!data.thumbnail?.url ? (
                   <p className="flex justify-center items-center font-black  capitalize text-gray-400 h-36">
                     no image
@@ -42,7 +42,7 @@ export const Shop: FC<Props> = ({ data }) => {
                     />
                   </picture>
                 )}
-              </picture>
+              </div>
               <div
                 className="p-3 bg-[#c9c7c7/10]"
                 dangerouslySetInnerHTML={{
@@ -59,9 +59,9 @@ export const Shop: FC<Props> = ({ data }) => {
               className="h-12 w-12"
               loop={true}
             />
-            {/* <span className="h-6 break-words">
+            <span className="h-6 break-words">
               {data.ingtagram.replace("https://www.instagram.com/", "")}
-            </span> */}
+            </span>
           </span>
         </Link>
       </div>
