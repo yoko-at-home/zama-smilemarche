@@ -31,7 +31,7 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <SmileMarcheImage />
-      <Shop data={data} />;
+      <Shop data={data} />
     </>
   );
 }
