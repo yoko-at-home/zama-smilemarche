@@ -12,6 +12,7 @@ import styles from "./index.module.css";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import { CraftDept } from "@/components/ShopList/CraftDept";
 import { Logo } from "@/components/logo";
+import { KitchenCar } from "@/components/ShopList/KitchenCar";
 
 export const revalidate = 60;
 
@@ -28,16 +29,20 @@ export default async function Shops() {
         <TitleH1 text="出店者リスト" />
 
         <div className={styles.box}>
+          <TitleH2 text="Kitchen Car" />
+          <KitchenCar articles={data.contents} />
+        </div>
+        <div className={styles.box}>
+          <TitleH2 text="Food" />
+          <FoodDept articles={data.contents} />
+        </div>
+        <div className={styles.box}>
           <TitleH2 text="Workshop" />
           <WorkshopDept articles={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Craft" />
           <CraftDept articles={data.contents} />
-        </div>
-        <div className={styles.box}>
-          <TitleH2 text="Food" />
-          <FoodDept articles={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Others" />
@@ -50,18 +55,6 @@ export default async function Shops() {
           <MassageDept articles={data.contents} />
         </div>
       </div>
-      <div className="py-10 flex justify-center items-center">
-        出店者専用公式LINE：
-        <a href="https://line.me/R/ti/p/u0Ir6bv" target="_blank">
-          <img
-            src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-            alt="友だち追加"
-            width="100"
-            height="100"
-          />
-        </a>
-      </div>
-
       {/* <Pagination totalCount={data.totalCount} /> */}
     </main>
   );

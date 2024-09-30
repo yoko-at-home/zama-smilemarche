@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { siteMetadata } from "@/data/siteMetadata";
 import Lottie from "lottie-react";
@@ -49,6 +50,31 @@ const Footer = () => {
         <Link href={siteMetadata.instagram} target="_blank">
           <Lottie animationData={Instagram} className="h-12 w-12" loop={true} />
         </Link>
+      </div>
+
+      <div className="flex justify-center flex-col md:flex-row">
+        <div className="pt-10 flex justify-center items-center mb-3  md:mb-0 md:mr-3 text-sm">
+          お客様専用公式LINE：
+          <a href="https://lin.ee/ebfIoUC" target="_blank">
+            <img
+              src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+              alt="友だち追加"
+              width="80"
+              height="80"
+            />
+          </a>
+        </div>
+        <div className="pb-10 flex justify-center items-center md:pt-10 md:pb-0 text-sm">
+          出店者専用公式LINE：
+          <a href="https://lin.ee/u0Ir6bv" target="_blank">
+            <img
+              src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+              alt="友だち追加"
+              width="80"
+              height="80"
+            />
+          </a>
+        </div>
       </div>
       <div className="mb-2 flex items-center justify-center align-middle space-x-2 text-sm text-gray-700 hover:text-red-400">
         <Link href={siteMetadata.HP} target="_blank">

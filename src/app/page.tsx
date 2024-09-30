@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { LIMIT } from "@/constants";
@@ -49,16 +48,16 @@ export default async function Home() {
                 <KitchenCar articles={data.contents} />
               </div>
               <div className="">
+                <TitleH2 text="Food" />
+                <FoodDept articles={data.contents} />
+              </div>
+              <div className="">
                 <TitleH2 text="Workshop" />
                 <WorkshopDept articles={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Craft" />
                 <CraftDept articles={data.contents} />
-              </div>
-              <div className="">
-                <TitleH2 text="Food" />
-                <FoodDept articles={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Others" />
@@ -81,21 +80,28 @@ export default async function Home() {
             一緒にマルシェを楽しみながら参加して頂けたらと思います。
             <br />
             ボランティア参加を希望される方は、公式Instagramのメッセージ、または公式LINEにてお問い合わせくださいませ。
-            <ol className="list-[number]">
-              <li className="ml-3">
-                <span className="font-bold">学生ボランティア</span> <br />
-                ※ボランティア証明書を無料で発行します。
+            <ol className="list-[number] mb-5 ml-3">
+              <li className="ml-3 mb-2">
+                <span className="font-bold">学生ボランティア</span>
+
                 <br />
-                ・本部のテントの設営・受付などお手伝いいただきます。
+                <span className="text-sm">
+                  本部のテントの設営・受付などお手伝いいただきます
+                  (ボランティア証明書を無料で発行)。
+                </span>
               </li>
-              <li className="ml-3">
+              <li className="ml-3 mb-2">
                 <span className="font-bold">一般ボランティア</span> <br />
-                ・本部のテントの設営・受付などお手伝いいただきます。
+                <span className="text-sm">
+                  本部のテントの設営・受付などお手伝いいただきます。
+                </span>
               </li>
               <li className="ml-3">
                 <span className="font-bold">カメラ撮影ボランティア</span>
                 <br />
-                ・Webサイトや各種SNSへの掲載用の撮影をお願いしています。
+                <span className="text-sm">
+                  Webサイトや各種SNSへの掲載用の撮影をお願いしています。
+                </span>
               </li>
             </ol>
           </div>
@@ -112,17 +118,6 @@ export default async function Home() {
               <li className="ml-3">D</li>
             </ol>
           </div>
-        </div>
-        <div className="py-10 flex justify-center items-center">
-          お客様専用公式LINE：
-          <a href="https://lin.ee/ebfIoUC" target="_blank">
-            <img
-              src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-              alt="友だち追加"
-              width="100"
-              height="100"
-            />
-          </a>
         </div>
       </div>
     </main>
