@@ -30,29 +30,29 @@ export default async function Shops() {
 
         <div className={styles.box}>
           <TitleH2 text="Kitchen Car" />
-          <KitchenCar articles={data.contents} />
+          <KitchenCar shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Food" />
-          <FoodDept articles={data.contents} />
+          <FoodDept shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Workshop" />
-          <WorkshopDept articles={data.contents} />
+          <WorkshopDept shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Craft" />
-          <CraftDept articles={data.contents} />
+          <CraftDept shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Enterprise" />
 
-          <EnterpriseDept articles={data.contents} />
+          <EnterpriseDept shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Others" />
 
-          <MassageDept articles={data.contents} />
+          <MassageDept shops={data.contents} />
         </div>
       </div>
     </main>

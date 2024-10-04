@@ -39,7 +39,7 @@ export type ToppageProps = {
 };
 
 export type ShopProps = {
-  articles?: TypeShop[];
+  shops?: TypeShop[];
 };
 export type TitleProps = {
   text: string;

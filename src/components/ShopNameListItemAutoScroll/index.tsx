@@ -7,7 +7,7 @@ import { ShopProps } from "@/types";
 
 const animation = { duration: 5000, easing: (t: number) => t };
 
-export default function ShopNameListItemAutoScroll({ articles }: ShopProps) {
+export default function ShopNameListItemAutoScroll({ shops }: ShopProps) {
   const [sliderRef, slider] = useKeenSlider<HTMLUListElement>({
     loop: true,
     renderMode: "performance",
@@ -43,17 +43,17 @@ export default function ShopNameListItemAutoScroll({ articles }: ShopProps) {
     }
   }, [slider]);
 
-  if (!articles) {
+  if (!shops) {
     return null;
   }
-  if (articles.length === 0) {
+  if (shops.length === 0) {
     return null;
   }
 
   return (
     <ul ref={sliderRef} className="keen-slider">
-      {articles.map((article) => (
-        <ShopNameListItem key={article.id} shop={article} />
+      {shops.map((shop) => (
+        <ShopNameListItem key={shop.id} shop={shop} />
       ))}
     </ul>
   );

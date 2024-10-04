@@ -46,7 +46,7 @@ export default async function Home() {
         <div className={styles.border}>
           <div className="flex flex-row items-center justify-center">
             {/* Auto横スクロールの名前リスト */}
-            <ShopNameListItemAutoScroll articles={data.contents} />
+            <ShopNameListItemAutoScroll shops={data.contents} />
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
@@ -54,31 +54,31 @@ export default async function Home() {
 
               <div className="">
                 <TitleH2 text="Kitchen Car" />
-                <KitchenCar articles={data.contents} />
+                <KitchenCar shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Food" />
-                <FoodDept articles={data.contents} />
+                <FoodDept shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Workshop" />
-                <WorkshopDept articles={data.contents} />
+                <WorkshopDept shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Craft" />
-                <CraftDept articles={data.contents} />
+                <CraftDept shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Enterprise" />
-                <EnterpriseDept articles={data.contents} />
+                <EnterpriseDept shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="パフォーマンス" />
-                <PerformanceDept articles={data.contents} />
+                <PerformanceDept shops={data.contents} />
               </div>
               <div className="">
                 <TitleH2 text="Others" />
-                <MassageDept articles={data.contents} />
+                <MassageDept shops={data.contents} />
               </div>
             </div>
           </div>
