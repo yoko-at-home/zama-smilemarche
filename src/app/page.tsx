@@ -5,12 +5,16 @@ import { getList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
 import ShopNameList from "@/components/ShopNameList";
-import { WorkshopDept } from "@/components/ShopNameList/WorkshopDept";
-import { CraftDept } from "@/components/ShopNameList/CraftDept";
-import { FoodDept } from "@/components/ShopNameList/FoodDept";
-import { EnterpriseDept } from "@/components/ShopNameList/EnterpriseDept";
-import { MassageDept } from "@/components/ShopNameList/MassageDept";
-import { KitchenCar } from "@/components/ShopList/KitchenCar";
+import { ToppageComponent } from "@/components/TopPage";
+import {
+  CraftDept,
+  EnterpriseDept,
+  KitchenCar,
+  MassageDept,
+  WorkshopDept,
+} from "@/components/ShopListCategory";
+import { FoodDept } from "@/components/ShopListCategory/FoodDept";
+
 export const revalidate = 60;
 
 export default async function Home() {
