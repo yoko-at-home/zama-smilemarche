@@ -1,8 +1,8 @@
-import { Tag } from "@/libs/microcms";
+import { Tag } from "@/types";
 import ShopListItem from "../ShopListItem";
 import { Props } from "./types";
 
-export const EnterpriseDept = ({ articles }: Props) => {
+export const FoodDept = ({ articles }: Props) => {
   if (!articles) {
     return null;
   }
@@ -32,7 +32,7 @@ export const EnterpriseDept = ({ articles }: Props) => {
         }
 
         // 条件分岐の開始
-        if (categoryId === "enterprise") {
+        if (categoryId === "food") {
           return (
             <li key={article.id} className="category-craft">
               <ShopListItem article={article} />

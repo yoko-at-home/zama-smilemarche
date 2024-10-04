@@ -1,4 +1,4 @@
-import { Article } from "@/libs/microcms";
+import { Article } from "@/types";
 
 export type Props = {
   articles?: Article[];

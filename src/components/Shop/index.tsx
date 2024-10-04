@@ -1,11 +1,11 @@
 "use client";
-import { Article } from "@/libs/microcms";
 import { formatRichText } from "@/libs/utils";
 import Link from "next/link";
 import { FC } from "react";
 import styles from "./index.module.css";
 import Lottie from "lottie-react";
 import Instagram from "../icons/instagram.json";
+import { Article } from "@/types";
 
 type Props = {
   data: Article;

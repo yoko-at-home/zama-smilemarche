@@ -1,5 +1,5 @@
 import ShopListItem from "../ShopListItem";
-import { Props } from "./types";
+import { Props } from "../ShopListCategory/types";
 
 export default function ShopList({ articles }: Props) {
   if (!articles) {

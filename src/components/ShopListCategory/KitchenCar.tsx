@@ -1,4 +1,4 @@
-import { Tag } from "@/libs/microcms";
+import { Tag } from "@/types";
 import ShopListItem from "../ShopListItem";
 import { Props } from "./types";
 

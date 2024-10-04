@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Article } from "@/libs/microcms";
 import styles from "./index.module.css";
+import { Article } from "@/types";
 
 type Props = {
   article: Article;
