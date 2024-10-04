@@ -25,7 +25,7 @@ export default async function Home() {
     limit: LIMIT,
   });
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen lg:px-20 2xl:px-32 md:px-16">
       <div>
         <div
           className="w-screen h-96 bg-cover bg-bottom"
