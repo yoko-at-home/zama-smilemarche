@@ -3,3 +3,4 @@ export { EnterpriseDept } from "./EnterpriseDept";
 export { KitchenCar } from "./KitchenCar";
 export { MassageDept } from "./MassageDept";
 export { WorkshopDept } from "./WorkshopDept";
+export { FoodDept } from "./FoodDept";

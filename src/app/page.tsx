@@ -4,7 +4,6 @@ import { LIMIT } from "@/constants";
 import { getList, getBannerList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
-import ShopNameList from "@/components/ShopNameList";
 import { ToppageComponent } from "@/components/TopPage";
 import {
   CraftDept,
@@ -12,8 +11,9 @@ import {
   KitchenCar,
   MassageDept,
   WorkshopDept,
+  FoodDept,
 } from "@/components/ShopListCategory";
-import { FoodDept } from "@/components/ShopListCategory/FoodDept";
+import ShopNameListItemAutoScroll from "@/components/ShopNameListItemAutoScroll";
 
 export const revalidate = 60;
 
@@ -44,7 +44,8 @@ export default async function Home() {
         <TitleH2 text="参加団体" />
         <div className={styles.border}>
           <div className="flex flex-row items-center justify-center">
-            <ShopNameList articles={data.contents} />
+            {/* Auto横スクロールの名前リスト */}
+            <ShopNameListItemAutoScroll articles={data.contents} />
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
