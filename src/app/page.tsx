@@ -12,7 +12,7 @@ import {
   MassageDept,
   WorkshopDept,
   FoodDept,
-} from "@/components/ShopListCategory";
+} from "@/components/ShopList_WithoutImage";
 import ShopNameListItemAutoScroll from "@/components/ShopNameListItemAutoScroll";
 
 export const revalidate = 60;
