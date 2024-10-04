@@ -10,7 +10,7 @@ export const WorkshopDept = ({ articles }: ShopProps) => {
     return null;
   }
   if (articles.length === 0) {
-    return <p>記事がありません。</p>;
+    return <p>出店がありません。</p>;
   }
 
   return (

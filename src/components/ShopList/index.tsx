@@ -6,7 +6,7 @@ export default function ShopList({ articles }: ShopProps) {
     return null;
   }
   if (articles.length === 0) {
-    return <p>記事がありません。</p>;
+    return <p>出店がありません。</p>;
   }
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
