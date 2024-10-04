@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./index.module.css";
-import { Article } from "@/types";
+import { TypeShop } from "@/types";
 
 type Props = {
-  article: Article;
+  article: TypeShop;
 };
 
 export default function ShopListItem({ article }: Props) {

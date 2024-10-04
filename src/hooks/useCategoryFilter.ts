@@ -1,7 +1,7 @@
-import { Article, Tag } from "@/types";
+import { TypeShop, Tag } from "@/types";
 
 export const useCategoryFilter = (
-  articles: Article[] | undefined,
+  articles: TypeShop[] | undefined,
   categoryIdToFilter: string
 ) => {
   if (!articles) return [];

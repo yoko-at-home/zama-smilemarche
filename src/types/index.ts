@@ -11,7 +11,7 @@ export type Tag = {
   MicroCMSDate;
 
 // ブログの型定義
-export type Blog = {
+export type Shop = {
   title: string;
   ingtagram: string;
   taste?: string;
@@ -30,7 +30,7 @@ export type Banner = {
   image2?: MicroCMSImage;
 };
 
-export type Article = Blog & MicroCMSContentId & MicroCMSDate;
+export type TypeShop = Shop & MicroCMSContentId & MicroCMSDate;
 
 export type TypeBanner = Banner & MicroCMSContentId & MicroCMSDate;
 
@@ -39,7 +39,7 @@ export type ToppageProps = {
 };
 
 export type ShopProps = {
-  articles?: Article[];
+  articles?: TypeShop[];
 };
 export type TitleProps = {
   text: string;

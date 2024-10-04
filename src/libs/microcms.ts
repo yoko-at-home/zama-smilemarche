@@ -1,4 +1,4 @@
-import { Banner, Blog } from "@/types";
+import { Banner, Shop } from "@/types";
 import { createClient, MicroCMSQueries } from "microcms-js-sdk";
 import { notFound } from "next/navigation";
 
@@ -19,7 +19,7 @@ export const client = createClient({
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
   const listData = await client
-    .getList<Blog>({
+    .getList<Shop>({
       endpoint: "shops",
       queries,
     })
@@ -33,7 +33,7 @@ export const getDetail = async (
   queries?: MicroCMSQueries
 ) => {
   const detailData = await client
-    .getListDetail<Blog>({
+    .getListDetail<Shop>({
       endpoint: "shops",
       contentId,
       queries,

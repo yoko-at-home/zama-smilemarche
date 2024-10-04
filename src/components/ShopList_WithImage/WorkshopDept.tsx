@@ -1,8 +1,8 @@
 import ShopListItem from "../ShopListItem";
-import { Article, ShopProps, Tag } from "@/types";
+import { ShopProps, Tag, TypeShop } from "@/types";
 
 type Props = {
-  articles?: Article[];
+  articles?: TypeShop[];
 };
 
 export const WorkshopDept = ({ articles }: ShopProps) => {
