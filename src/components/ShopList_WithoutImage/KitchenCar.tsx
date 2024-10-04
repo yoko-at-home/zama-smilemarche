@@ -1,40 +1,24 @@
-import { ShopProps, Tag } from "@/types";
+import { Shop, ShopProps } from "@/types";
 import ShopNameListItem from "../ShopNameListItem";
+import { useCategoryFilter } from "@/hooks/useCategoryFilter";
+
+type Props = {
+  articles?: Shop[];
+};
 
 export const KitchenCar = ({ articles }: ShopProps) => {
-  if (!articles) {
-    return null;
-  }
-  if (articles.length === 0) {
+  // articles が存在しない場合は空配列を渡す
+  const filteredArticles = useCategoryFilter(articles ?? [], "kitchen-car");
+
+  if (filteredArticles.length === 0) {
     return <p>出店がありません。</p>;
   }
 
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
-      {articles.map((article) => {
-        // category の型が配列でない場合に対処する
-
-        let categoryId: string | undefined;
-
-        if (Array.isArray(article.category)) {
-          // categoryが配列の場合
-          categoryId = article.category[0]?.id;
-        } else if (
-          typeof article.category === "object" &&
-          article.category !== null
-        ) {
-          // categoryがオブジェクトの場合
-          categoryId = (article.category as Tag).id; // 型アサーションを使用
-        } else if (typeof article.category === "string") {
-          // categoryが文字列の場合
-          categoryId = article.category;
-        }
-
-        // 条件分岐の開始
-        if (categoryId === "food") {
-          return <ShopNameListItem article={article} key={article.id} />;
-        }
-      })}
+      {filteredArticles.map((article) => (
+        <ShopNameListItem article={article} key={article.id} />
+      ))}
     </ul>
   );
 };

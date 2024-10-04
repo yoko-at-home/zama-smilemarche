@@ -14,6 +14,7 @@ import {
   FoodDept,
 } from "@/components/ShopList_WithoutImage";
 import ShopNameListItemAutoScroll from "@/components/ShopNameListItemAutoScroll";
+import { PerformanceDept } from "@/components/ShopList_WithoutImage/PerformanceDept";
 
 export const revalidate = 60;
 
@@ -68,12 +69,15 @@ export default async function Home() {
                 <CraftDept articles={data.contents} />
               </div>
               <div className="">
-                <TitleH2 text="Others" />
-              </div>
-              <div className="">
                 <TitleH2 text="Enterprise" />
                 <EnterpriseDept articles={data.contents} />
-
+              </div>
+              <div className="">
+                <TitleH2 text="パフォーマンス" />
+                <PerformanceDept articles={data.contents} />
+              </div>
+              <div className="">
+                <TitleH2 text="Others" />
                 <MassageDept articles={data.contents} />
               </div>
             </div>

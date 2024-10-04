@@ -1,23 +1,23 @@
 import { Shop, ShopProps } from "@/types";
-import ShopListItem from "../ShopListItem";
+import ShopNameListItem from "../ShopNameListItem";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 
 type Props = {
   articles?: Shop[];
 };
 
-export const MassageDept = ({ articles }: ShopProps) => {
+export const PerformanceDept = ({ articles }: ShopProps) => {
   // articles が存在しない場合は空配列を渡す
-  const filteredArticles = useCategoryFilter(articles ?? [], "massage");
+  const filteredArticles = useCategoryFilter(articles ?? [], "performance");
 
   if (filteredArticles.length === 0) {
-    return <p>出店がありません。</p>;
+    return <p>出演がありません。</p>;
   }
 
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
       {filteredArticles.map((article) => (
-        <ShopListItem article={article} key={article.id} />
+        <ShopNameListItem article={article} key={article.id} />
       ))}
     </ul>
   );
