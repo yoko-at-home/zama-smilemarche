@@ -53,7 +53,7 @@ export default function ShopNameListItemAutoScroll({ articles }: ShopProps) {
   return (
     <ul ref={sliderRef} className="keen-slider">
       {articles.map((article) => (
-        <ShopNameListItem key={article.id} article={article} />
+        <ShopNameListItem key={article.id} shop={article} />
       ))}
     </ul>
   );

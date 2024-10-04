@@ -1,23 +1,20 @@
 import { TypeShop, Tag } from "@/types";
 
 export const useCategoryFilter = (
-  articles: TypeShop[] | undefined,
+  shops: TypeShop[] | undefined,
   categoryIdToFilter: string
 ) => {
-  if (!articles) return [];
+  if (!shops) return [];
 
-  return articles.filter((article) => {
+  return shops.filter((shop) => {
     let categoryId: string | undefined;
 
-    if (Array.isArray(article.category)) {
-      categoryId = article.category[0]?.id;
-    } else if (
-      typeof article.category === "object" &&
-      article.category !== null
-    ) {
-      categoryId = (article.category as Tag).id;
-    } else if (typeof article.category === "string") {
-      categoryId = article.category;
+    if (Array.isArray(shop.category)) {
+      categoryId = shop.category[0]?.id;
+    } else if (typeof shop.category === "object" && shop.category !== null) {
+      categoryId = (shop.category as Tag).id;
+    } else if (typeof shop.category === "string") {
+      categoryId = shop.category;
     }
 
     return categoryId === categoryIdToFilter;

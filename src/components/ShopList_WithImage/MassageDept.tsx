@@ -17,7 +17,7 @@ export const MassageDept = ({ articles }: ShopProps) => {
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
       {filteredArticles.map((article) => (
-        <ShopListItem article={article} key={article.id} />
+        <ShopListItem shop={article} key={article.id} />
       ))}
     </ul>
   );

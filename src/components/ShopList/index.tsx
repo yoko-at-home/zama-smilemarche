@@ -11,7 +11,7 @@ export default function ShopList({ articles }: ShopProps) {
   return (
     <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
       {articles.map((article) => (
-        <ShopListItem key={article.id} article={article} />
+        <ShopListItem key={article.id} shop={article} />
       ))}
     </ul>
   );
