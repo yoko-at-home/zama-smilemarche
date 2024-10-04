@@ -5,13 +5,13 @@ import { FC } from "react";
 import styles from "./index.module.css";
 import Lottie from "lottie-react";
 import Instagram from "../icons/instagram.json";
-import { Article } from "@/types";
+import { Shop } from "@/types";
 
 type Props = {
-  data: Article;
+  data: Shop;
 };
 
-export const Shop: FC<Props> = ({ data }) => {
+export const ShopPageComponent: FC<Props> = ({ data }) => {
   return (
     <main className={styles.main}>
       <div className=" mt-16">

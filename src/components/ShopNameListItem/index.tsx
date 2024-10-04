@@ -1,8 +1,8 @@
-import { Article } from "@/types";
+import { TypeShop } from "@/types";
 import Link from "next/link";
 
 type Props = {
-  article: Article;
+  article: TypeShop;
 };
 
 export default function ShopNameListItem({ article }: Props) {
