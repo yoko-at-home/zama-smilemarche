@@ -1,7 +1,7 @@
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { LIMIT } from "@/constants";
-import { getList } from "@/libs/microcms";
+import { getList, getBannerList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
 import ShopNameList from "@/components/ShopNameList";
@@ -18,6 +18,9 @@ import { FoodDept } from "@/components/ShopListCategory/FoodDept";
 export const revalidate = 60;
 
 export default async function Home() {
+  const toppage = await getBannerList({
+    limit: LIMIT,
+  });
   const data = await getList({
     limit: LIMIT,
   });
@@ -34,9 +37,9 @@ export default async function Home() {
       </div>
 
       <div className="mx-3 p-3 sm:px-6 sm:mx-auto">
-        <TitleH1 text="「第16回Smileマルシェ座間」主催！！" />
+        <TitleH1 text="マルシェ情報" />
         <div className={styles.border}>
-          <div className="m-3 p-3 sm:p-6">11月24日（日）</div>
+          <ToppageComponent banners={toppage.contents} />
         </div>
         <TitleH2 text="参加団体" />
         <div className={styles.border}>
