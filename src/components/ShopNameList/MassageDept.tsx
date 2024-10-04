@@ -1,8 +1,7 @@
-import { Tag } from "@/libs/microcms";
+import { ShopProps, Tag } from "@/types";
 import ShopNameListItem from "../ShopNameListItem";
-import { Props } from "./types";
 
-export const MassageDept = ({ articles }: Props) => {
+export const MassageDept = ({ articles }: ShopProps) => {
   if (!articles) {
     return null;
   }

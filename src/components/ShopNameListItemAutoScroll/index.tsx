@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Article } from "@/libs/microcms";
 import "keen-slider/keen-slider.min.css";
+import { Article } from "@/types";
 
 type Props = {
   article: Article;

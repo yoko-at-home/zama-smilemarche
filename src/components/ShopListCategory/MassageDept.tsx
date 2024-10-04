@@ -1,8 +1,7 @@
-import { Tag } from "@/types";
+import { ShopProps, Tag } from "@/types";
 import ShopListItem from "../ShopListItem";
-import { Props } from "./types";
 
-export const MassageDept = ({ articles }: Props) => {
+export const MassageDept = ({ articles }: ShopProps) => {
   if (!articles) {
     return null;
   }

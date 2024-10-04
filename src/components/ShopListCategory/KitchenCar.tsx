@@ -1,8 +1,7 @@
-import { Tag } from "@/types";
+import { ShopProps, Tag } from "@/types";
 import ShopListItem from "../ShopListItem";
-import { Props } from "./types";
 
-export const KitchenCar = ({ articles }: Props) => {
+export const KitchenCar = ({ articles }: ShopProps) => {
   if (!articles) {
     return null;
   }

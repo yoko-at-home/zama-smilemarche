@@ -1,13 +1,13 @@
 "use client";
 import ShopNameListItemAutoScroll from "../ShopNameListItemAutoScroll";
-import { Props } from "./types";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect } from "react";
+import { ShopProps } from "@/types";
 
 const animation = { duration: 5000, easing: (t: number) => t };
 
-export default function ShopNameList({ articles }: Props) {
+export default function ShopNameList({ articles }: ShopProps) {
   const [sliderRef, slider] = useKeenSlider<HTMLUListElement>({
     loop: true,
     renderMode: "performance",

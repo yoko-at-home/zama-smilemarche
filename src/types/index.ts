@@ -37,3 +37,10 @@ export type TypeBanner = Banner & MicroCMSContentId & MicroCMSDate;
 export type ToppageProps = {
   banners?: TypeBanner[];
 };
+
+export type ShopProps = {
+  articles?: Article[];
+};
+export type TitleProps = {
+  text: string;
+};
