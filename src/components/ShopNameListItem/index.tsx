@@ -1,5 +1,5 @@
+import { Article } from "@/types";
 import Link from "next/link";
-import { Article } from "@/libs/microcms";
 
 type Props = {
   article: Article;

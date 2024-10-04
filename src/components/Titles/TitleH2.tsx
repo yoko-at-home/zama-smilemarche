@@ -1,5 +1,5 @@
+import { TitleProps } from "@/types";
 import { FC } from "react";
-import { TitleProps } from "../ShopListCategory/types";
 
 export const TitleH2: FC<TitleProps> = ({ text }) => {
   return (

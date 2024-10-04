@@ -1,10 +1,10 @@
-import { Article, Tag } from "@/libs/microcms";
+import { Article, ShopProps, Tag } from "@/types";
 import ShopNameListItem from "../ShopNameListItem";
 type Props = {
   articles?: Article[];
 };
 
-export const WorkshopDept = ({ articles }: Props) => {
+export const WorkshopDept = ({ articles }: ShopProps) => {
   if (!articles) {
     return null;
   }
