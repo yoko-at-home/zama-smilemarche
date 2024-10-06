@@ -53,18 +53,34 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
             </div>
           </div>
         </div>
-        <Link href={data.ingtagram} target="_blank">
-          <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
-            <Lottie
-              animationData={Instagram}
-              className="h-12 w-12"
-              loop={true}
-            />
-            <span className="flex justify-start h-6 overflow-x-scroll w-[200px]">
-              {data.ingtagram.replace("https://www.instagram.com/", "")}
+        <div className="flex flex-row">
+          <Link href={data.ingtagram} target="_blank">
+            <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
+              <Lottie
+                animationData={Instagram}
+                className="h-12 w-12"
+                loop={true}
+              />
+              <span className="flex justify-start h-6 overflow-x-scroll w-[200px]">
+                {data.ingtagram.replace("https://www.instagram.com/", "")}
+              </span>
             </span>
-          </span>
-        </Link>
+          </Link>
+          {!data.ingtagram2 ? null : (
+            <Link href={data.ingtagram2} target="_blank">
+              <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
+                <Lottie
+                  animationData={Instagram}
+                  className="h-12 w-12"
+                  loop={true}
+                />
+                <span className="flex justify-start h-6 overflow-x-scroll w-[200px]">
+                  {data.ingtagram2.replace("https://www.instagram.com/", "")}
+                </span>
+              </span>
+            </Link>
+          )}
+        </div>
       </div>
       <div className="flex flex-col justify-center md:flex-row md:justify-around">
         <div className="flex flex-col md:pr-3">

@@ -14,6 +14,7 @@ export type Tag = {
 export type Shop = {
   title: string;
   ingtagram: string;
+  ingtagram2?: string;
   taste?: string;
   category: Tag[];
   content: string;
