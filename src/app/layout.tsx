@@ -8,6 +8,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 export const metadata: Metadata = {
   title: siteMetadata.author,
   description: siteMetadata.description,
+  openGraph: siteMetadata.openGraph,
   keywords: siteMetadata.keywords,
 };
 
