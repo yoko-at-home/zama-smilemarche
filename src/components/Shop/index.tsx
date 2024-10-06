@@ -11,6 +11,7 @@ type Props = {
   data: Shop;
 };
 
+// ショップ個別ページ
 export const ShopPageComponent: FC<Props> = ({ data }) => {
   return (
     <main className={styles.main}>
