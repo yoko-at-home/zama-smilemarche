@@ -2,6 +2,7 @@
 "use client";
 import { CustomLink } from "./CustomLink";
 import { useState } from "react";
+import { siteMetadata } from "@/data/siteMetadata";
 
 const items = [
   { href: "/", label: "Home" },
@@ -65,6 +66,13 @@ export const NavBarMobile: React.FC<Props> = () => {
                 </CustomLink>
               );
             })}
+            <CustomLink
+              href={siteMetadata.HP}
+              target="_blank"
+              className="mx-auto flex flex-col p-2 text-right text-xl font-medium tracking-widest text-gray-400 opacity-90 hover:text-orange-300 sm:p-3 sm:tracking-widest"
+            >
+              スマイルブリスHP（外部リンク）
+            </CustomLink>
           </nav>
         </div>
       </div>
