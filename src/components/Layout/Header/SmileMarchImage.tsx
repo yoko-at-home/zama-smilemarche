@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const SmileMarcheImage = () => {
   return (
-    <div className="absolute top-0 p-4 shadow-sm rounded-sm dro p-shadow-sm w-screen h-1/2 bg-opacity-20 bg-cover bg-left-top z-10">
+    <div className="relative">
       <Link href="/shops" className="absolute top-5 left-2">
         <Image
           alt="con"
