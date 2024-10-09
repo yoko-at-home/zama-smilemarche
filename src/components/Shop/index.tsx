@@ -15,16 +15,18 @@ type Props = {
 export const ShopPageComponent: FC<Props> = ({ data }) => {
   return (
     <main className={styles.main}>
-      <div className=" mt-16">
-        <div className={styles.card}>
+      <div className="mt-16">
+        <div className="relative pt-[9px] px-[9px] mt-4 rounded-t-[35px] shadow-lg w-[350px] h-40 bg-[#e8e8e8] text-gray-700 inset-0 drop-shadow-lg">
           <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1"></div>
-          <h1 className="pt-2 flex flex-col justify-center text-center bg-[#93a1a1]/20 rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] font-mono mb-3 font-semibold text-xl shadow-sm">
+          <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] font-mono mb-3 font-semibold text-xl shadow-sm">
             {data.title}
           </h1>
-          <p className={styles.card_inner2}>{data.taste}</p>
+          <p className="flex flex-col justify-center text-center font-semibold text-lg font-mono h-14 drop-shadow-md items-center  mt-3 text-gray-600  bg-[#93a1a1]/20">
+            {data.taste}
+          </p>
         </div>
         <div>
-          <div className={styles.card2}>
+          <div className="relative pt-[9px] px-[9px] shadow-lg w-[350px] h-[800px] bg-[#e8e8e8] text-[#93a1a1] inset-0 drop-shadow-lg">
             <div className="absolute inset-3 pointer-events-none">
               <div className="flex flex-col">
                 {!data.thumbnail?.url ? (
@@ -47,7 +49,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
                 )}
               </div>
               <div
-                className="p-3 bg-[#c9c7c7/10]"
+                className="p-3 bg-[#c9c7c7/10] text-gray-600"
                 dangerouslySetInnerHTML={{
                   __html: `${formatRichText(data.content)}`,
                 }}

@@ -6,57 +6,6 @@
   background: content-box radial-gradient(crimson, skyblue);
 }
 
-
-/* From Uiverse.io by LilaRest */
-.card {
-  --bg: #e8e8e8;
-  --contrast: #e2e0e0;
-  --grey: #93a1a1;
-  position: relative;
-  padding: 9px 9px 0 9px;
-  background-color: var(--bg);
-  border-radius: 35px 35px 0 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.1) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 15px 5px 0 0;
-  width: 350px;
-  height: 170px;
-}
-
-
-.card2 {
-  --bg: #e8e8e8;
-  --contrast: #e2e0e0;
-  --grey: #93a1a1;
-  position: relative;
-  padding: 10px 10px 0 10px;
-  background-color: var(--bg);
-  border-radius:  0 0 35px 35px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.1) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  width: 350px;
-  height: 800px;
-}
-
-.card_inner2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: screen;
-  height: 60px;
-  /* Content style */
-  font-size: 15px;
-  font-weight: 900;
-  color: gray;
-  text-align: left;
-  font-family: monospace;
-}
 .thumbnail {
   width: 330px;
   height: auto;
