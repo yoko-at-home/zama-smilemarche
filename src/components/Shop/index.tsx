@@ -2,7 +2,6 @@
 import { formatRichText } from "@/libs/utils";
 import Link from "next/link";
 import { FC } from "react";
-import styles from "./index.module.css";
 import Lottie from "lottie-react";
 import Instagram from "../icons/instagram.json";
 import { Shop } from "@/types";
@@ -14,7 +13,7 @@ type Props = {
 // ショップ個別ページ
 export const ShopPageComponent: FC<Props> = ({ data }) => {
   return (
-    <main className={styles.main}>
+    <main className="flex flex-col items-center">
       <div className="mt-16">
         <div className="relative pt-[9px] px-[9px] mt-4 rounded-t-[35px] shadow-lg w-[350px] h-40 bg-[#e8e8e8] text-gray-700 inset-0 drop-shadow-lg">
           <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1"></div>
