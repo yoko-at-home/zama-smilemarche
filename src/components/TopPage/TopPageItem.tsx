@@ -12,7 +12,7 @@ export default function TopPageItem({ banner }: ToppageProps) {
     <div className="flex flex-col items-center justify-center leading-loose">
       <ClipTextTitle>{banner.title}</ClipTextTitle>
       <div className="flex flex-col items-center justify-center md:flex-row md:px-10 py-10">
-        <div>
+        <div className="mb-5 mt-3 ">
           <picture>
             <source
               type="image/webp"
@@ -21,10 +21,10 @@ export default function TopPageItem({ banner }: ToppageProps) {
             />
             <img src={banner.image1?.url} alt="マルシェチラシ表" className="" />
           </picture>
-          <p className="text-right">チラシ表</p>
+          {/* <p className="text-right">表</p> */}
         </div>
 
-        <div className="mb-5 mt-3">
+        <div className="mb-5 mt-3 sm:ml-3">
           <picture>
             <source
               type="image/webp"
@@ -37,7 +37,7 @@ export default function TopPageItem({ banner }: ToppageProps) {
               className="shadow-black rounded-sm"
             />
           </picture>
-          <p className="text-right">チラシ裏</p>
+          {/* <p className="text-right">裏</p> */}
         </div>
       </div>
       <p className="font-semibold">{banner.description}</p>
