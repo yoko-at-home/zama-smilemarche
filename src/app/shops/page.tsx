@@ -46,12 +46,10 @@ export default async function Shops() {
         </div>
         <div className={styles.box}>
           <TitleH2 text="Enterprise" />
-
           <EnterpriseDept shops={data.contents} />
         </div>
         <div className={styles.box}>
           <TitleH2 text="Others" />
-
           <MassageDept shops={data.contents} />
         </div>
       </div>

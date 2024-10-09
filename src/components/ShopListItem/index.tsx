@@ -10,9 +10,11 @@ export default function ShopListItem({ shop }: Props) {
   return (
     // <div className="">
     <div className={styles.card}>
-      <div className={styles.card_overlay}></div>
-      <Link href={`/shops/${shop.id}`}>
-        <p className={styles.card_inner}>{shop.title}</p>
+      <div className="absolute inset-0 pointer-events-none bg-[#93a1a1]/20 rounded-t-md p-1"></div>
+      <Link className="" href={`/shops/${shop.id}`}>
+        <p className="pt-2 flex flex-col justify-center text-center bg-[#93a1a1]/20 rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] font-mono mb-3 font-semibold text-xl shadow-sm">
+          {shop.title}
+        </p>
       </Link>
       <Link href={`/shops/${shop.id}`}>
         {!shop.thumbnail?.url ? (
@@ -20,18 +22,12 @@ export default function ShopListItem({ shop }: Props) {
             no image
           </p>
         ) : (
-          <picture>
-            <source
-              type="image/webp"
-              media="(max-width: 640px)"
-              srcSet={`${shop.thumbnail?.url}?fm=webp&w=414 1x, ${shop.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-            />
-            <img
-              src={shop.thumbnail?.url}
-              alt=""
-              className={styles.thumbnail}
-            />
-          </picture>
+          <div
+            className="relative flex h-44 w-full items-end justify-start rounded bg-cover bg-center text-left"
+            style={{
+              backgroundImage: `url(${shop.thumbnail?.url})`,
+            }}
+          ></div>
         )}
       </Link>
     </div>

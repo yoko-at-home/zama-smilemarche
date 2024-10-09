@@ -24,33 +24,6 @@
   height: 170px;
 }
 
-.card_overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
-  filter: opacity(10%) contrast(105%);
-}
-
-.card_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: full;
-  height: 60px;
-  background-color: var(--contrast);
-  border-radius: 30px 30px 0 0;
-  /* Content style */
-  font-size: 20px;
-  font-weight: 900;
-  color: #aeaaaa;
-  text-align: center;
-  font-family: monospace;
-  margin-bottom:10px
-}
 
 .card2 {
   --bg: #e8e8e8;
@@ -67,15 +40,6 @@
   width: 350px;
   height: 800px;
 }
-
-
-.card_overlay2 {
-  position: absolute;
-  inset: 3;
- pointer-events: none;
-  filter: opacity(80%) contrast(105%);
-}
-
 
 .card_inner2 {
   display: -webkit-box;

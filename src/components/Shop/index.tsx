@@ -17,13 +17,15 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
     <main className={styles.main}>
       <div className=" mt-16">
         <div className={styles.card}>
-          <div className={styles.card_overlay}></div>
-          <h1 className={styles.card_inner}>{data.title}</h1>
+          <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1"></div>
+          <h1 className="pt-2 flex flex-col justify-center text-center bg-[#93a1a1]/20 rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] font-mono mb-3 font-semibold text-xl shadow-sm">
+            {data.title}
+          </h1>
           <p className={styles.card_inner2}>{data.taste}</p>
         </div>
         <div>
           <div className={styles.card2}>
-            <div className={styles.card_overlay2}>
+            <div className="absolute inset-3 pointer-events-none">
               <div className="flex flex-col">
                 {!data.thumbnail?.url ? (
                   <p className="flex justify-center items-center font-black  capitalize text-gray-400 h-36">
