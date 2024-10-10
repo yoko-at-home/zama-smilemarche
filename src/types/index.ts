@@ -25,6 +25,7 @@ export type Shop = {
 // ブログの型定義
 export type Banner = {
   title: string;
+  date: string;
   description: string;
   description2?: string;
   image1?: MicroCMSImage;

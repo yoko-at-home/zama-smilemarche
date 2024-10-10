@@ -14,3 +14,12 @@ export const ClipTextTitle: FC<FontProps> = (props) => {
     </h2>
   );
 };
+export const ClipTextTitleReversed: FC<FontProps> = (props) => {
+  return (
+    <h2 className="mb-5 pt-5 pl-2 text-3xl font-black md:text-5xl">
+      <span className="bg-gradient-to-r from-orange-300 via-red-300 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+        {props.children}
+      </span>
+    </h2>
+  );
+};

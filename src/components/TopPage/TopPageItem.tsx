@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import { formatRichText } from "@/libs/utils";
-import { ClipTextTitle } from "../Titles/ClipTextTitle";
+import { ClipTextTitle, ClipTextTitleReversed } from "../Titles/ClipTextTitle";
 import { TypeBanner } from "@/types";
 
 type ToppageProps = {
@@ -11,6 +11,7 @@ export default function TopPageItem({ banner }: ToppageProps) {
   return (
     <div className="flex flex-col items-center justify-center leading-loose">
       <ClipTextTitle>{banner.title}</ClipTextTitle>
+      <ClipTextTitleReversed>{banner.date}</ClipTextTitleReversed>
       <div className="flex flex-col items-center justify-center md:flex-row md:px-10 py-10">
         <div className="mb-5 mt-3 ">
           <picture>
