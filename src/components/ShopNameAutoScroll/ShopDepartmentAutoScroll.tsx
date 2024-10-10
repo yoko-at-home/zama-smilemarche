@@ -14,7 +14,10 @@ type ShopDepartmentProps = {
   category: string;
 };
 
-export const ShopDepartment = ({ shops, category }: ShopDepartmentProps) => {
+export const ShopDepartmentAutoScroll = ({
+  shops,
+  category,
+}: ShopDepartmentProps) => {
   // shops が存在しない場合は空配列を渡す
   const filteredShops = useCategoryFilter(shops ?? [], category);
 
@@ -64,30 +67,4 @@ export const ShopDepartment = ({ shops, category }: ShopDepartmentProps) => {
       ))}
     </ul>
   );
-};
-
-export const CraftDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="craft" />;
-};
-export const EnterpriseDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="enterprise" />;
-};
-
-export const FoodDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="food" />;
-};
-
-export const KitchenCarAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="kitchen-car" />;
-};
-
-export const MassageDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="massage" />;
-};
-
-export const PerformanceDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="performance" />;
-};
-export const WorkshopDeptAutoScroll = ({ shops }: ShopProps) => {
-  return <ShopDepartment shops={shops} category="workshop" />;
 };
