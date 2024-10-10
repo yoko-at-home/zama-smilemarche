@@ -1,4 +1,3 @@
-import { TitleH1 } from "@/components/Titles/TitleH1";
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { LIMIT } from "@/constants";
 import { getList, getBannerList } from "@/libs/microcms";
@@ -16,6 +15,7 @@ import {
 } from "@/components/ShopList_WithoutImage";
 import { WorkshopDeptAutoScroll } from "@/components/ShopNameAutoScroll";
 import ShopNameListItemAutoScroll from "@/components/ShopNameAutoScroll/test";
+import { ClipTextTitle } from "@/components/Titles/ClipTextTitle";
 
 export const revalidate = 60;
 
@@ -39,7 +39,6 @@ export default async function Home() {
       </div>
 
       <div className="mx-3 p-3 sm:px-6 sm:mx-auto">
-        <TitleH1 text="マルシェ情報" />
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
         </div>
@@ -51,35 +50,34 @@ export default async function Home() {
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
-              <TitleH1 text="部門別" />
-
-              <div className="">
-                <TitleH2 text="Kitchen Car" />
+              <div>
+                <ClipTextTitle>キッチンカー</ClipTextTitle>
                 <KitchenCar shops={data.contents} />
               </div>
-              <div className="">
-                <TitleH2 text="Food" />
+              <div>
+                <ClipTextTitle>Food</ClipTextTitle>
                 <FoodDept shops={data.contents} />
               </div>
-              <div className="">
-                <TitleH2 text="Workshop" />
+              <div>
+                <ClipTextTitle>エンターテイメント</ClipTextTitle>
+                <PerformanceDept shops={data.contents} />
+              </div>
+              <div>
+                <ClipTextTitle>ワークショップ</ClipTextTitle>
                 <WorkshopDept shops={data.contents} />
               </div>
-              <div className="">
-                <TitleH2 text="Craft" />
+              <div>
+                <ClipTextTitle>クラフト</ClipTextTitle>
                 <WorkshopDeptAutoScroll />
                 <CraftDept shops={data.contents} />
               </div>
-              <div className="">
-                <TitleH2 text="Enterprise" />
+              <div>
+                <ClipTextTitle>Enterprise</ClipTextTitle>
                 <EnterpriseDept shops={data.contents} />
               </div>
-              <div className="">
-                <TitleH2 text="パフォーマンス" />
-                <PerformanceDept shops={data.contents} />
-              </div>
-              <div className="">
-                <TitleH2 text="Others" />
+
+              <div>
+                <ClipTextTitle>癒しどころ</ClipTextTitle>
                 <MassageDept shops={data.contents} />
               </div>
             </div>
