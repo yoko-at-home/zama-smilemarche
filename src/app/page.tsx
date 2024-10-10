@@ -44,16 +44,16 @@ export default async function Home() {
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
         </div>
-        <ClipTextTitleReversed>❤️ ❤️ 美味しいもの ❤️ ❤️</ClipTextTitleReversed>
+        <ClipTextTitleReversed>❤️ 美味しいもの ❤️</ClipTextTitleReversed>
         <div className={styles.border}>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>キッチンカー</ClipTextTitle>
+                <ClipTextTitle>🚚 キッチンカー 🚚</ClipTextTitle>
                 <KitchenCar shops={data.contents} />
               </div>
               <div className="pb-3">
-                <ClipTextTitle>Food</ClipTextTitle>
+                <ClipTextTitle>美味しいお店が集結🔥</ClipTextTitle>
                 <FoodDept shops={data.contents} />
               </div>
             </div>
@@ -64,14 +64,14 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>情熱が止まらない</ClipTextTitle>
+                <ClipTextTitle>🔥情熱が止まらない</ClipTextTitle>
                 <PerformanceDept shops={data.contents} />
               </div>
             </div>
           </div>
         </div>
 
-        <ClipTextTitleReversed>❤️ ❤️ Workshop ❤️ ❤️</ClipTextTitleReversed>
+        <ClipTextTitleReversed>❤️ Workshop ❤️</ClipTextTitleReversed>
         <div className={styles.border}>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
@@ -88,7 +88,7 @@ export default async function Home() {
             <ShopDepartmentAutoScroll shops={data.contents} category="craft" />
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>素敵な作家さんたちのクラフト</ClipTextTitle>
+                <ClipTextTitle>素敵な作家さんたちとの出会い</ClipTextTitle>
                 <CraftDept shops={data.contents} />
               </div>
             </div>
@@ -103,6 +103,7 @@ export default async function Home() {
               <div className="pb-3">
                 <ClipTextTitle>ほっこり、癒しどころ</ClipTextTitle>
                 <EnterpriseDept shops={data.contents} />
+                <ClipTextTitle>至福のひと時を...</ClipTextTitle>
               </div>
 
               <div className="pb-3">
