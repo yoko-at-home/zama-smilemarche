@@ -13,8 +13,8 @@ import {
   FoodDept,
   PerformanceDept,
 } from "@/components/ShopList_WithoutImage";
-import ShopNameListItemAutoScroll from "@/components/ShopNameAutoScroll/test";
 import { ClipTextTitle } from "@/components/Titles/ClipTextTitle";
+import { ShopDepartment } from "@/components/ShopNameAutoScroll/ShopNameScrollByDept";
 
 export const revalidate = 60;
 
@@ -45,40 +45,44 @@ export default async function Home() {
         <div className={styles.border}>
           <div className="flex flex-row items-center justify-center">
             {/* Auto横スクロールの名前リスト */}
-            <ShopNameListItemAutoScroll shops={data.contents} />
+            <ShopDepartment shops={data.contents} category="workshop" />
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>キッチンカー</ClipTextTitle>
                 <KitchenCar shops={data.contents} />
               </div>
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>Food</ClipTextTitle>
                 <FoodDept shops={data.contents} />
               </div>
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>エンターテイメント</ClipTextTitle>
                 <PerformanceDept shops={data.contents} />
               </div>
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>ワークショップ</ClipTextTitle>
                 <WorkshopDept shops={data.contents} />
               </div>
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>クラフト</ClipTextTitle>
                 <CraftDept shops={data.contents} />
               </div>
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>Enterprise</ClipTextTitle>
                 <EnterpriseDept shops={data.contents} />
               </div>
 
-              <div>
+              <div className="pb-3">
                 <ClipTextTitle>癒しどころ</ClipTextTitle>
                 <MassageDept shops={data.contents} />
               </div>
             </div>
+          </div>
+          <div className="flex flex-row items-center justify-center">
+            {/* Auto横スクロールの名前リスト */}
+            <ShopDepartment shops={data.contents} category="craft" />
           </div>
         </div>
 
