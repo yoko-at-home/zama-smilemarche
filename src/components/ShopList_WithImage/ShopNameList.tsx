@@ -5,9 +5,8 @@ type Props = {
   shop: TypeShop;
 };
 
-export const ShopListItem = ({ shop }: Props) => {
+export const ShopNameList = ({ shop }: Props) => {
   return (
-    // <div className="">
     <div className="relative pt-2 px-2 mt-4 mx-2 rounded-t-[35px] shadow-lg  h-[280px] bg-[#e8e8e8] text-[#93a1a1] inset-0 drop-shadow-lg">
       <div className="absolute inset-0 pointer-events-none bg-[#93a1a1]/20 rounded-t-[35px]  p-1"></div>
       <Link className="" href={`/shops/${shop.id}`}>
@@ -30,6 +29,5 @@ export const ShopListItem = ({ shop }: Props) => {
         )}
       </Link>
     </div>
-    // </div>
   );
 };

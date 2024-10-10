@@ -12,9 +12,9 @@ import {
   MassageDept,
   WorkshopDept,
   FoodDept,
+  PerformanceDept,
 } from "@/components/ShopList_WithoutImage";
 import ShopNameListItemAutoScroll from "@/components/ShopNameListItemAutoScroll";
-import { PerformanceDept } from "@/components/ShopList_WithoutImage/PerformanceDept";
 
 export const revalidate = 60;
 

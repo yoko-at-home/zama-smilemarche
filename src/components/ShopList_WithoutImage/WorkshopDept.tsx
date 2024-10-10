@@ -15,7 +15,7 @@ export const WorkshopDept = ({ shops }: ShopProps) => {
   }
 
   return (
-    <ul className="grid gap-4 grid-cols-2 sm:grid-cols-4 lg:grid-cols-5overflow-auto mx-auto">
+    <ul className="grid gap-4 grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 overflow-auto mx-auto">
       {filteredShops.map((shop) => (
         <ShopNameListItem shop={shop} key={shop.id} />
       ))}

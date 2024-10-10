@@ -5,14 +5,14 @@ type Props = {
   shop: TypeShop;
 };
 
-export default function ShopNameListItem({ shop }: Props) {
+export const ShopNameList = ({ shop }: Props) => {
   return (
-    <li className="flex flex-row justify-center items-center my-6 mx-3 py-4 px-5 shadow-xl bg-gray-50">
+    <li className="flex flex-row justify-center items-center my-6 mx-3 py-4 px-5 drop-shadow-lg bg-gray-50">
       <Link href={`/shops/${shop.id}`}>
-        <span className="font-mono font-extrabold text-gray-500 z-20  shadow-white">
+        <span className="font-mono font-semibold text-gray-500 z-20  shadow-white overflow-x-scroll">
           {shop.title}
         </span>
       </Link>
     </li>
   );
-}
+};
