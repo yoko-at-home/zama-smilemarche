@@ -14,7 +14,8 @@ import {
   FoodDept,
   PerformanceDept,
 } from "@/components/ShopList_WithoutImage";
-import ShopNameListItemAutoScroll from "@/components/ShopNameListItemAutoScroll";
+import { WorkshopDeptAutoScroll } from "@/components/ShopNameAutoScroll";
+import ShopNameListItemAutoScroll from "@/components/ShopNameAutoScroll/test";
 
 export const revalidate = 60;
 
@@ -66,6 +67,7 @@ export default async function Home() {
               </div>
               <div className="">
                 <TitleH2 text="Craft" />
+                <WorkshopDeptAutoScroll />
                 <CraftDept shops={data.contents} />
               </div>
               <div className="">

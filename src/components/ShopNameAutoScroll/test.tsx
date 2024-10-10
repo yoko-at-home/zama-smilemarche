@@ -1,9 +1,9 @@
 "use client";
-import ShopNameListItem from "./ShopNameListItem";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect } from "react";
 import { ShopProps } from "@/types";
+import ShopNameList from "./ShopNameList";
 
 const animation = { duration: 5000, easing: (t: number) => t };
 
@@ -53,7 +53,7 @@ export default function ShopNameListItemAutoScroll({ shops }: ShopProps) {
   return (
     <ul ref={sliderRef} className="keen-slider">
       {shops.map((shop) => (
-        <ShopNameListItem key={shop.id} shop={shop} />
+        <ShopNameList key={shop.id} shop={shop} />
       ))}
     </ul>
   );
