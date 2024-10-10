@@ -25,7 +25,7 @@ export default async function Shops() {
       <SmileBlissImage />
       <Logo />
 
-      <div className={styles.box}>
+      <div className="px-5 md:px-20">
         <TitleH1 text="出店者リスト" />
 
         <div className={styles.box}>
