@@ -9,7 +9,7 @@ export default function ShopList({ shops }: ShopProps) {
     return <p>出店がありません。</p>;
   }
   return (
-    <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 overflow-auto mx-auto">
+    <ul className="grid gap-4 grid-cols-3 sm:grid-cols-5 md:grid-cols-8 overflow-auto mx-auto">
       {shops.map((article) => (
         <ShopListItem key={article.id} shop={article} />
       ))}

@@ -2,9 +2,6 @@ import { Shop, ShopProps } from "@/types";
 import ShopListItem from "../ShopListItem";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 
-type Props = {
-  shops?: Shop[];
-};
 
 export const PerformanceDept = ({ shops }: ShopProps) => {
   // shops が存在しない場合は空配列を渡す
