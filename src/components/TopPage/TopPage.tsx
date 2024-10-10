@@ -10,7 +10,7 @@ export const ToppageComponent = ({ banners }: ToppageProps) => {
   }
 
   return (
-    <ul className="grid gap-4 grid-cols-1 mdm:grid-cols-2 mx-auto px-3 my-10">
+    <ul className="mx-auto px-3 my-10">
       {banners.map((banner) => {
         return <TopPageItem banner={banner} key={banner.id} />;
       })}
