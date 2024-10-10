@@ -13,7 +13,6 @@ import {
   FoodDept,
   PerformanceDept,
 } from "@/components/ShopList_WithoutImage";
-import { WorkshopDeptAutoScroll } from "@/components/ShopNameAutoScroll";
 import ShopNameListItemAutoScroll from "@/components/ShopNameAutoScroll/test";
 import { ClipTextTitle } from "@/components/Titles/ClipTextTitle";
 
@@ -68,7 +67,6 @@ export default async function Home() {
               </div>
               <div>
                 <ClipTextTitle>クラフト</ClipTextTitle>
-                <WorkshopDeptAutoScroll />
                 <CraftDept shops={data.contents} />
               </div>
               <div>
