@@ -26,10 +26,10 @@ export default async function Home() {
     limit: LIMIT,
   });
   return (
-    <main className="min-h-screen lg:px-20 2xl:px-32 md:px-16">
+    <main className="min-h-screen w-screen">
       <div>
         <div
-          className="w-screen h-96 bg-cover bg-bottom"
+          className="h-96 bg-cover bg-bottom"
           style={{
             backgroundImage: "url('/static/img/marche/event-top.webp",
           }}
@@ -37,7 +37,7 @@ export default async function Home() {
         <SmileBlissImage />
       </div>
 
-      <div className="mx-3 p-3 sm:px-6 sm:mx-auto">
+      <div className="mx-3 p-3 sm:px-6 lg:px-20 md:px-16">
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
         </div>
