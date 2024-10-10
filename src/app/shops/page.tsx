@@ -5,14 +5,15 @@ import { TitleH1 } from "@/components/Titles/TitleH1";
 import styles from "./index.module.css";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import { Logo } from "@/components/logo";
-import { KitchenCar } from "@/components/ShopList_WithImage/KitchenCar";
-import { FoodDept } from "@/components/ShopList_WithImage/FoodDept";
 import {
   CraftDept,
   EnterpriseDept,
+  FoodDept,
+  KitchenCar,
   MassageDept,
   WorkshopDept,
 } from "@/components/ShopList_WithImage";
+
 
 export const revalidate = 60;
 

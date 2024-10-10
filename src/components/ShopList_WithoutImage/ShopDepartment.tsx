@@ -1,6 +1,6 @@
 import { ShopProps } from "@/types";
+import ShopListItem from "../ShopListItem";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
-import { ShopListItem } from "./ShopListItem";
 
 type ShopDepartmentProps = {
   shops: ShopProps["shops"];
