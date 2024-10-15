@@ -1,4 +1,3 @@
-import styles from "./index.module.css";
 import { formatRichText } from "@/libs/utils";
 import { ClipTextTitle, ClipTextTitleReversed } from "../Titles/ClipTextTitle";
 import { TypeBanner } from "@/types";
@@ -12,7 +11,7 @@ export default function TopPageItem({ banner }: ToppageProps) {
     <div className="flex flex-col items-center justify-center leading-loose">
       <ClipTextTitleReversed>{banner.title}</ClipTextTitleReversed>
       <ClipTextTitle>{banner.date}</ClipTextTitle>
-      <div className="flex flex-col items-center justify-center md:flex-row md:px-10 py-10">
+      <div className="flex flex-col items-center justify-center md:px-10 py-10">
         <div className="mb-5 mt-3 ">
           <picture>
             <source
@@ -40,9 +39,15 @@ export default function TopPageItem({ banner }: ToppageProps) {
           </picture>
           {/* <p className="text-right">裏</p> */}
         </div>
+        <div className="w-80 sm:w-96 md:w-2/3 overflow-hidden">
+          <div
+            className="p-3 bg-[#c9c7c7/10] text-gray-600"
+            dangerouslySetInnerHTML={{
+              __html: banner.content ? formatRichText(banner.content) : "",
+            }}
+          />
+        </div>
       </div>
-      <p className="font-semibold">{banner.description}</p>
-      <p className="">{banner.description2}</p>
     </div>
   );
 }

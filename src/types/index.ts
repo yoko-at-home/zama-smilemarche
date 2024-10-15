@@ -26,8 +26,7 @@ export type Shop = {
 export type Banner = {
   title: string;
   date: string;
-  description: string;
-  description2?: string;
+  content?: string;
   image1?: MicroCMSImage;
   image2?: MicroCMSImage;
 };
