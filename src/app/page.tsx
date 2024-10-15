@@ -42,7 +42,7 @@ export default async function Home() {
         <SmileBlissImage />
       </div>
 
-      <div className="mx-3 p-3 sm:px-6 lg:px-20 md:px-16">
+      <div className="mx-3 mt-5 sm:mt-10 md:mt-15 p-3 sm:px-6 lg:px-20 md:px-16">
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
         </div>
