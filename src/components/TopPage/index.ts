@@ -1,1 +1,2 @@
-export { ToppageComponent } from "./TopPage";
+export { SupportersComponent } from "./SupportersComponent";
+export { ToppageComponent } from "./ToppageComponent";

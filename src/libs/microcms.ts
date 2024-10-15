@@ -42,7 +42,8 @@ export const getDetail = async (
 
   return detailData;
 };
-// ブログ一覧を取得
+
+// 一覧を取得
 export const getBannerList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<Banner>({
@@ -51,20 +52,4 @@ export const getBannerList = async (queries?: MicroCMSQueries) => {
     })
     .catch(notFound);
   return listData;
-};
-
-// ブログの詳細を取得
-export const getBannerDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
-  const detailData = await client
-    .getListDetail<Banner>({
-      endpoint: "banner",
-      contentId,
-      queries,
-    })
-    .catch(notFound);
-
-  return detailData;
 };

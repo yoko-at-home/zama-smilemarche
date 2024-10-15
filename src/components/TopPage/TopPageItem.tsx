@@ -21,7 +21,6 @@ export default function TopPageItem({ banner }: ToppageProps) {
             />
             <img src={banner.image1?.url} alt="マルシェチラシ表" className="" />
           </picture>
-          {/* <p className="text-right">表</p> */}
         </div>
 
         <div className="mb-5 mt-3 sm:ml-3">
@@ -37,7 +36,6 @@ export default function TopPageItem({ banner }: ToppageProps) {
               className="shadow-black rounded-sm"
             />
           </picture>
-          {/* <p className="text-right">裏</p> */}
         </div>
         <div className="w-80 sm:w-96 md:w-2/3 overflow-hidden">
           <div

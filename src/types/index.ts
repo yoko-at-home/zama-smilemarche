@@ -10,7 +10,7 @@ export type Tag = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// ブログの型定義
+// Shopの型定義
 export type Shop = {
   title: string;
   ingtagram: string;
@@ -22,21 +22,31 @@ export type Shop = {
   picture1?: MicroCMSImage;
   picture2?: MicroCMSImage;
 };
-// ブログの型定義
+export type TypeShop = Shop & MicroCMSContentId & MicroCMSDate;
+
+// Toppageの型定義
 export type Banner = {
   title: string;
   date: string;
   content?: string;
   image1?: MicroCMSImage;
   image2?: MicroCMSImage;
+  description: string;
+  supporter1: string;
+  supporter2: string;
+  supporter3?: string;
+  supporter4?: string;
+  supporter5?: string;
 };
-
-export type TypeShop = Shop & MicroCMSContentId & MicroCMSDate;
 
 export type TypeBanner = Banner & MicroCMSContentId & MicroCMSDate;
 
+
 export type ToppageProps = {
-  banners?: TypeBanner[];
+  banners: TypeBanner[];
+};
+export type SupporterProps = {
+  banners: TypeBanner;
 };
 
 export type ShopProps = {

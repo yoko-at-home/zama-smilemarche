@@ -3,7 +3,7 @@ import { LIMIT } from "@/constants";
 import { getList, getBannerList } from "@/libs/microcms";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import styles from "./index.module.css";
-import { ToppageComponent } from "@/components/TopPage";
+import { SupportersComponent, ToppageComponent } from "@/components/TopPage";
 import {
   CraftDept,
   EnterpriseDept,
@@ -25,9 +25,11 @@ export default async function Home() {
   const toppage = await getBannerList({
     limit: LIMIT,
   });
+
   const data = await getList({
     limit: LIMIT,
   });
+
   return (
     <main className="min-h-screen w-screen">
       <div>
@@ -43,6 +45,13 @@ export default async function Home() {
       <div className="mx-3 p-3 sm:px-6 lg:px-20 md:px-16">
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
+        </div>
+        <ClipTextTitleReversed>協力会社、協賛企業</ClipTextTitleReversed>
+        <div className={styles.border}>
+          <div className="m-3 p-3 sm:p-6 leading-loose">
+            {/* 協力会社、協賛企業の紹介 */}
+            <SupportersComponent banners={toppage.contents[0]} />
+          </div>
         </div>
         <ClipTextTitleReversed>❤️ 美味しいもの ❤️</ClipTextTitleReversed>
         <div className={styles.border}>
@@ -144,19 +153,6 @@ export default async function Home() {
                   Webサイトや各種SNSへの掲載用の撮影をお願いしています。
                 </span>
               </li>
-            </ol>
-          </div>
-        </div>
-        <TitleH2 text="協力会社、協賛企業の紹介" />
-
-        <div className={styles.border}>
-          <div className="m-3 p-3 sm:p-6 leading-loose">
-            Smile Marcheは次の企業さまからご支援をいただいています。
-            <ol className="list-[square]">
-              <li className="ml-3">A</li>
-              <li className="ml-3">B</li>
-              <li className="ml-3">C</li>
-              <li className="ml-3">D</li>
             </ol>
           </div>
         </div>
