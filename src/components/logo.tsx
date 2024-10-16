@@ -33,8 +33,8 @@ export const Logo = () => {
           padding: 5px 6px; /* テキストの前後の余白 */
           background-color: rgb(233, 250, 228, 0.6); /* 背景色（透明度） */
           width: 140px; /* 吹き出し全体の幅 */
-          right: -80%; /* 表示位置 */
-          top: 60%;
+          right: 40%; /* 表示位置 */
+          top: 80%;
           font-size: 70%; /* 文字サイズ */
           color: rgb(2, 9, 66);
           box-shadow: 5px 5px 11px rgb(109, 112, 122),
