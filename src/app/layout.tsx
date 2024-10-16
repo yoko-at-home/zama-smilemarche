@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="font-mono">
+      <body className="font-mono antialiased">
         <NavBarMobile />
         {children}
         <Footer />

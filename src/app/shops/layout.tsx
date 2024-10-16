@@ -31,7 +31,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center antialiased">
       <SmileBlissImage />
       <div className="flex flex-col justify-center items-centerr">
         <NaviShops />
