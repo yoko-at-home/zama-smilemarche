@@ -4,7 +4,7 @@ import { NavLink } from "./NaviLink";
 
 const items = [
   { href: "/shops/kitchencar", label: "キッチンカー" },
-  { href: "/shops/food", label: "食品" },
+  { href: "/shops/food", label: "食 品" },
   { href: "/shops/workshop", label: "ワークショップ" },
   { href: "/shops/craft", label: "クラフト" },
   { href: "/shops/other", label: "他" },
