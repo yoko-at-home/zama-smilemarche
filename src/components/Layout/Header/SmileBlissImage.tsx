@@ -15,7 +15,7 @@ const SmileBlissImage = () => {
           height={130}
         />
       </Link>
-      <div className="absolute bottom-5 left-[40%] md:left-[45%]">
+      <div className="absolute top-10 right-5">
         <Logo />
       </div>
     </div>
