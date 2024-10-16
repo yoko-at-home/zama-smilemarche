@@ -6,17 +6,18 @@ import { ClipTextTitleReversed } from "@/components/Titles/ClipTextTitle";
 
 export const revalidate = 60;
 
-export default async function Shops() {
+export default async function CraftPage() {
   const data = await getList({
     limit: LIMIT,
   });
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center pb-24">
+    <main className="flex min-h-screen flex-col items-center pb-24">
       <div className="px-5 md:px-20">
         <div className={styles.box}>
           <ClipTextTitleReversed>クラフト</ClipTextTitleReversed>
           <CraftDept shops={data.contents} />
         </div>
+        <CraftDept shops={data.contents} />
       </div>
     </main>
   );

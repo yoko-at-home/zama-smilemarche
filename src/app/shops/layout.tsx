@@ -12,7 +12,7 @@ const items = [
 ];
 const NaviShops = () => {
   return (
-    <nav className="flex flex-row place-items-end mt-40 mx-3 rotate-280 text-center mb-1">
+    <nav className="flex flex-row place-items-end mt-40 mx-3 rotate-280 text-center mb-1 z-30 text-gray-500">
       {items.map(({ href, label }) => {
         return (
           <NavLink key={href} href={href} activeClassName="text-orange-500">
