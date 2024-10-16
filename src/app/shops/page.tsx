@@ -1,7 +1,6 @@
 import { TitleH2 } from "@/components/Titles/TitleH2";
 import { LIMIT } from "@/constants";
 import { getList } from "@/libs/microcms";
-import { TitleH1 } from "@/components/Titles/TitleH1";
 import styles from "./index.module.css";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import { Logo } from "@/components/logo";
@@ -14,7 +13,6 @@ import {
   WorkshopDept,
 } from "@/components/ShopList_WithImage";
 
-
 export const revalidate = 60;
 
 export default async function Shops() {
@@ -22,13 +20,8 @@ export default async function Shops() {
     limit: LIMIT,
   });
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center py-24">
-      <SmileBlissImage />
-      <Logo />
-
+    <main className="flex min-h-screen flex-col items-center justify-center pb-24">
       <div className="px-5 md:px-20">
-        <TitleH1 text="出店者リスト" />
-
         <div className={styles.box}>
           <TitleH2 text="Kitchen Car" />
           <KitchenCar shops={data.contents} />

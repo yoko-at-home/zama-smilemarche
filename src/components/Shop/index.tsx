@@ -17,10 +17,10 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
       <div className="mt-16">
         <div className="relative pt-[9px] px-[9px] mt-4 rounded-t-[35px] shadow-lg w-[350px] h-40 bg-[#e8e8e8] text-gray-700 inset-0 drop-shadow-lg">
           <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1"></div>
-          <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] font-mono mb-3 font-semibold text-xl shadow-sm">
+          <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] mb-3 font-semibold text-xl shadow-sm">
             {data.title}
           </h1>
-          <p className="flex flex-col justify-center text-center font-semibold text-md font-mono h-14 drop-shadow-md items-center  mt-3 text-gray-600  bg-[#93a1a1]/20">
+          <p className="flex flex-col justify-center text-center font-semibold text-md h-14 drop-shadow-md items-center  mt-3 text-gray-600  bg-[#93a1a1]/20">
             {data.taste}
           </p>
         </div>
