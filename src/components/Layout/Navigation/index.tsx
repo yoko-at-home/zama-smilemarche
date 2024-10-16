@@ -29,16 +29,16 @@ export const NavBarMobile: React.FC<Props> = () => {
       <div className="fixed right-10 bottom-28 z-50 rounded pt-1 xl:right-96">
         <button
           type="button"
-          className="mx-1 h-16 w-16 rounded"
+          className="mx-1 h-20 w-20 rounded"
           aria-label="Toggle Menu"
           onClick={handleNavBarOpen}
         >
           <img
             alt="navigation icon"
             src="/static/favicon_io/android-chrome-512x512.webp"
-            className="z-50 w-16 rounded-full md:w-24 bg-white border-2 border-sky-200 animate-pulse"
-            width="22px"
-            height="22px"
+            className="z-50 w-20 rounded-full md:w-24 bg-white border-2 border-sky-200 hover:animate-bounce"
+            width="30px"
+            height="30px"
             loading="lazy"
           />
         </button>
