@@ -26,7 +26,7 @@ export const NavBarMobile: React.FC<Props> = () => {
 
   return (
     <>
-      <div className="fixed right-10 bottom-28 z-50 rounded pt-1 xl:right-96">
+      <div className="fixed right-5 bottom-0 z-50 rounded pt-1">
         <button
           type="button"
           className="mx-1 h-20 w-20 rounded"
