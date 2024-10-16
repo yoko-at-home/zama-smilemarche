@@ -36,7 +36,7 @@ export const NavBarMobile: React.FC<Props> = () => {
           <img
             alt="navigation icon"
             src="/static/favicon_io/android-chrome-512x512.webp"
-            className="z-50 w-20 rounded-full md:w-24 bg-white border-2 border-sky-200 hover:animate-bounce"
+            className="z-50 w-20 rounded-full md:w-24 bg-white border-2 border-sky-200 animate-pulse"
             width="30px"
             height="30px"
             loading="lazy"
