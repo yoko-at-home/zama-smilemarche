@@ -39,7 +39,7 @@ const Footer = () => {
           className="bg-amber-50 flex flex-col items-center w-12 justify-center rounded-full text-emerald-800 animate-pulse shadow-sm"
         >
           <FaHome />
-          <span className="text-[1px] font-thin font-mono">Home</span>
+          <span className="text-[1px] font-thin">Home</span>
         </Link>
         <Link href={siteMetadata.facebook} target="_blank">
           <Lottie animationData={Facebook} className="h-12 w-12" loop={true} />
@@ -52,7 +52,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <div className="flex justify-center flex-col md:flex-row text-sm font-mono text-gray-500">
+      <div className="flex justify-center flex-col md:flex-row text-sm text-gray-500">
         <div className="pt-10 flex justify-center items-center mb-3  md:mb-0 md:mr-3">
           お客様専用公式LINE：
           <a href="https://lin.ee/ebfIoUC" target="_blank">
