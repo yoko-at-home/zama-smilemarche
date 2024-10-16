@@ -15,7 +15,7 @@ const NaviShops = () => {
       {items.map(({ href, label }) => {
         return (
           <NavLink key={href} href={href} activeClassName="text-orange-500">
-            <span className="rounded-tl-lg px-1 sm:px-3 pt-2 text-sm sm:text-lg md:text-2xl bg-gradient-radial from-[#f0f0f0] to-[#aaa4a4] text-center h-20 sm:mr-1">
+            <span className="rounded-tl-lg px-1 sm:px-3 pt-2 text-sm sm:text-lg md:text-2xl bg-gradient-radial from-[#f0f0f0] to-[#aaa4a4] text-center h-20 mr-1">
               {label}
             </span>
           </NavLink>
