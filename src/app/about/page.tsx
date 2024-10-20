@@ -22,7 +22,7 @@ export default function About() {
             <div className="relative p-10 -z-20" />
             <div className="  mx-3 sm:mx-12 md:mx-32">
               <iframe
-                className="h-96 w-full md:h-[500px]"
+                className="h-60 md:h-96 w-full"
                 // width="100%"
                 // height="450"
                 src="https://www.youtube.com/embed/qyFCoMeI-54?si=QpUzn_R_iGjPruGa"
