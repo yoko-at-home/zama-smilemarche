@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/cheerio": "^0.22.35",
     "add": "^2.0.6",
     "cheerio": "^1.0.0",
