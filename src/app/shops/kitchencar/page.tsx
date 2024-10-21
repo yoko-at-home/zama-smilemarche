@@ -11,14 +11,16 @@ export default async function KitchenCarPage() {
   const data = await getList({
     limit: LIMIT,
   });
-  return (
-    <main className="flex min-h-screen flex-col items-center pb-24">
-      <div className="px-5 md:px-20">
-        <div className={styles.box}>
-          <ClipTextTitleReversed>キッチンカー</ClipTextTitleReversed>
-          <KitchenCar shops={data.contents} />
-        </div>
-      </div>
-    </main>
-  );
+      const filteredData = data.contents.filter((item) => item.join !== false);
+
+      return (
+        <main className="flex min-h-screen flex-col items-center pb-24">
+          <div className="px-5 md:px-20">
+            <div className={styles.box}>
+              <ClipTextTitleReversed>キッチンカー</ClipTextTitleReversed>
+              <KitchenCar shops={filteredData} />
+            </div>
+          </div>
+        </main>
+      );
 }

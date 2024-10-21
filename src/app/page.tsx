@@ -30,6 +30,8 @@ export default async function Home() {
     limit: LIMIT,
   });
 
+  const filteredData = data.contents.filter((item) => item.join !== false);
+
   return (
     <main className="min-h-screen w-screen">
 

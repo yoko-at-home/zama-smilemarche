@@ -10,14 +10,15 @@ export default async function FoodPage() {
   const data = await getList({
     limit: LIMIT,
   });
-  return (
-    <main className="flex min-h-screen flex-col items-center pb-24">
-      <div className="px-5 md:px-20">
-        <div className={styles.box}>
-          <ClipTextTitleReversed>美味しいもの</ClipTextTitleReversed>
-          <FoodDept shops={data.contents} />
+    const filteredData = data.contents.filter((item) => item.join !== false);
+    return (
+      <main className="flex min-h-screen flex-col items-center pb-24">
+        <div className="px-5 md:px-20">
+          <div className={styles.box}>
+            <ClipTextTitleReversed>美味しいもの</ClipTextTitleReversed>
+            <FoodDept shops={filteredData} />
+          </div>
         </div>
-      </div>
-    </main>
-  );
+      </main>
+    );
 }

@@ -18,6 +18,7 @@ export type Shop = {
   taste?: string;
   category: Tag[];
   content: string;
+  join: boolean;
   thumbnail?: MicroCMSImage;
   picture1?: MicroCMSImage;
   picture2?: MicroCMSImage;
