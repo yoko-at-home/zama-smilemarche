@@ -61,11 +61,14 @@ export default function TopPageItem({ banner }: ToppageProps) {
             srcSet={`${banner.areamap?.url}?fm=webp&w=414 1x, ${banner.areamap?.url}?fm=webp&w=414&dpr=2 2x`}
           />
           {!banner.areamap ? null : (
-            <img
-              src={banner.areamap.url}
-              alt="エリアマップ"
-              className="shadow-black rounded-sm"
-            />
+            <div className="flex flex-col items-center">
+              <ClipTextTitle>🌐 エリアマップ 🌐 </ClipTextTitle>
+              <img
+                src={banner.areamap.url}
+                alt="エリアマップ"
+                className="shadow-black rounded-sm"
+              />
+            </div>
           )}
         </picture>
       </div>
