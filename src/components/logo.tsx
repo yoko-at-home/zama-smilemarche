@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <div className="w-36 flex justify-center">
       <div className="balloonoya border">
-        {siteMetadata.title}
+        {siteMetadata.LogoTitle}
         <span className="balloon font-semibold whitespace-nowrap">
           🎈みんな来てね！🎈
         </span>

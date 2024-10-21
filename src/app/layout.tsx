@@ -1,16 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
 import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
-import { siteMetadata } from "@/data/siteMetadata";
-
-export const metadata: Metadata = {
-  title: siteMetadata.author,
-  description: siteMetadata.description,
-  openGraph: siteMetadata.openGraph,
-  keywords: siteMetadata.keywords,
-};
+import MetaHeader from "@/components/Layout/Header/MetaHeader";
 
 export default function RootLayout({
   children,
@@ -19,6 +11,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <MetaHeader />
+
       <body className="font-mono antialiased">
         <NavBarMobile />
         {children}

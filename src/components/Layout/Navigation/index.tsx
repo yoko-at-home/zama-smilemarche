@@ -8,7 +8,6 @@ const items = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Smile Marche" },
   { href: "/shops", label: "All Shops" },
-  { href: "/service", label: "Service" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];

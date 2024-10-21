@@ -32,6 +32,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen w-screen">
+
       <div>
         <div
           className="h-96 bg-cover bg-bottom"
