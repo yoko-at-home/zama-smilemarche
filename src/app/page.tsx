@@ -34,7 +34,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen w-screen">
-
       <div>
         <div
           className="h-96 bg-cover bg-bottom"
@@ -49,24 +48,18 @@ export default async function Home() {
         <div className={styles.border}>
           <ToppageComponent banners={toppage.contents} />
         </div>
-        <ClipTextTitleReversed>協力会社、協賛企業</ClipTextTitleReversed>
-        <div className={styles.border}>
-          <div className="m-3 p-3 sm:p-6 leading-loose">
-            {/* 協力会社、協賛企業の紹介 */}
-            <SupportersComponent banners={toppage.contents[0]} />
-          </div>
-        </div>
+
         <ClipTextTitleReversed>❤️ 美味しいもの ❤️</ClipTextTitleReversed>
         <div className={styles.border}>
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
                 <ClipTextTitle>🚚 キッチンカー 🚚</ClipTextTitle>
-                <KitchenCar shops={data.contents} />
+                <KitchenCar shops={filteredData} />
               </div>
               <div className="pb-3">
                 <ClipTextTitle>美味しいお店が集結🔥</ClipTextTitle>
-                <FoodDept shops={data.contents} />
+                <FoodDept shops={filteredData} />
               </div>
             </div>
           </div>
@@ -77,7 +70,7 @@ export default async function Home() {
             <div className="px-3">
               <div className="pb-3">
                 <ClipTextTitle>🔥情熱が止まらない</ClipTextTitle>
-                <PerformanceDept shops={data.contents} />
+                <PerformanceDept shops={filteredData} />
               </div>
             </div>
           </div>
@@ -89,7 +82,7 @@ export default async function Home() {
             <div className="px-3">
               <div className="pb-3">
                 <ClipTextTitle>楽しく、作っちゃおう♪</ClipTextTitle>
-                <WorkshopDept shops={data.contents} />
+                <WorkshopDept shops={filteredData} />
               </div>
             </div>
           </div>
@@ -97,15 +90,15 @@ export default async function Home() {
         <ClipTextTitleReversed>❤️ ❤️ Craft ❤️ ❤️</ClipTextTitleReversed>
         <div className={styles.border}>
           <div className="flex flex-col items-center justify-center sm:p-6">
-            <ShopDepartmentAutoScroll shops={data.contents} category="craft" />
+            <ShopDepartmentAutoScroll shops={filteredData} category="craft" />
             <div className="px-3">
               <div className="pb-3">
                 <ClipTextTitle>素敵な作家さんたちとの出会い</ClipTextTitle>
-                <CraftDept shops={data.contents} />
+                <CraftDept shops={filteredData} />
               </div>
             </div>
             <ClipTextTitle>見るだけでも楽しいよ！</ClipTextTitle>
-            <ShopDepartmentAutoScroll shops={data.contents} category="craft" />
+            <ShopDepartmentAutoScroll shops={filteredData} category="craft" />
           </div>
         </div>
         <ClipTextTitleReversed>❤️ ❤️ Healing ❤️ ❤️</ClipTextTitleReversed>
@@ -114,12 +107,12 @@ export default async function Home() {
             <div className="px-3">
               <div className="pb-3">
                 <ClipTextTitle>ほっこり、癒しどころ</ClipTextTitle>
-                <EnterpriseDept shops={data.contents} />
+                <EnterpriseDept shops={filteredData} />
                 <ClipTextTitle>至福のひと時を...</ClipTextTitle>
               </div>
 
               <div className="pb-3">
-                <MassageDept shops={data.contents} />
+                <MassageDept shops={filteredData} />
               </div>
             </div>
           </div>
@@ -157,6 +150,14 @@ export default async function Home() {
                 </span>
               </li>
             </ol>
+          </div>
+        </div>
+
+        <ClipTextTitleReversed>協力会社、協賛企業</ClipTextTitleReversed>
+        <div className={styles.border}>
+          <div className="m-3 p-3 sm:p-6 leading-loose">
+            {/* 協力会社、協賛企業の紹介 */}
+            <SupportersComponent banners={toppage.contents[0]} />
           </div>
         </div>
       </div>
