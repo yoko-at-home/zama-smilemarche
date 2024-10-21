@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { formatRichText } from "@/libs/utils";
 import { ClipTextTitle, ClipTextTitleReversed } from "../Titles/ClipTextTitle";
 import { TypeBanner } from "@/types";
