@@ -18,6 +18,7 @@ import {
   ClipTextTitleReversed,
 } from "@/components/Titles/ClipTextTitle";
 import { ShopDepartmentAutoScroll } from "@/components/ShopNameAutoScroll/ShopDepartmentAutoScroll";
+import Link from "next/link";
 
 export const revalidate = 60;
 
@@ -54,11 +55,19 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>🚚 キッチンカー 🚚</ClipTextTitle>
+                <ClipTextTitle>
+                  🚚 キッチンカー 🚚
+                  <Link href="/shops/kitchencar">&nbsp;→motto✨</Link>
+                </ClipTextTitle>
+
                 <KitchenCar shops={filteredData} />
               </div>
               <div className="pb-3">
-                <ClipTextTitle>美味しいお店が集結🔥</ClipTextTitle>
+                <ClipTextTitle>
+                  美味しいお店が集結🔥
+                  <Link href="/shops/food">&nbsp;→motto✨</Link>
+                </ClipTextTitle>
+
                 <FoodDept shops={filteredData} />
               </div>
             </div>
@@ -69,7 +78,11 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>🔥情熱が止まらない</ClipTextTitle>
+                <ClipTextTitle>
+                  🔥情熱が止まらない
+                  <Link href="/shops/entertainment">&nbsp;→motto✨</Link>
+                </ClipTextTitle>
+
                 <PerformanceDept shops={filteredData} />
               </div>
             </div>
@@ -81,7 +94,11 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center sm:p-6">
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>楽しく、作っちゃおう♪</ClipTextTitle>
+                <ClipTextTitle>
+                  楽しく、作っちゃおう♪
+                  <Link href="/shops/workshop">&nbsp;→motto✨</Link>
+                </ClipTextTitle>
+
                 <WorkshopDept shops={filteredData} />
               </div>
             </div>
@@ -93,11 +110,19 @@ export default async function Home() {
             <ShopDepartmentAutoScroll shops={filteredData} category="craft" />
             <div className="px-3">
               <div className="pb-3">
-                <ClipTextTitle>素敵な作家さんたちとの出会い</ClipTextTitle>
+                <ClipTextTitle>
+                  素敵な作家さんたちとの出会い
+                  <Link href="/shops/craft">&nbsp;→motto✨</Link>
+                </ClipTextTitle>
+
                 <CraftDept shops={filteredData} />
               </div>
             </div>
-            <ClipTextTitle>見るだけでも楽しいよ！</ClipTextTitle>
+
+            <ClipTextTitle>
+              見るだけでも楽しいよ！
+              <Link href="/shops/craft">&nbsp;→motto✨</Link>
+            </ClipTextTitle>
             <ShopDepartmentAutoScroll shops={filteredData} category="craft" />
           </div>
         </div>
