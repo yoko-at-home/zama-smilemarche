@@ -52,6 +52,22 @@ export default function TopPageItem({ banner }: ToppageProps) {
           />
         </div>
       </div>
+      <div className="mb-5 mt-3 sm:ml-3">
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 640px)"
+            srcSet={`${banner.areamap?.url}?fm=webp&w=414 1x, ${banner.areamap?.url}?fm=webp&w=414&dpr=2 2x`}
+          />
+          {!banner.areamap ? null : (
+            <img
+              src={banner.areamap.url}
+              alt="エリアマップ"
+              className="shadow-black rounded-sm"
+            />
+          )}
+        </picture>
+      </div>
     </div>
   );
 }

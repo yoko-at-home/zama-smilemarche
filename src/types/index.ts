@@ -32,12 +32,18 @@ export type Banner = {
   content?: string;
   image1?: MicroCMSImage;
   image2?: MicroCMSImage;
+  areamap?: MicroCMSImage;
   description: string;
   supporter1: string;
+  supporter1_image: MicroCMSImage;
   supporter2: string;
+  supporter2_image?: MicroCMSImage;
   supporter3?: string;
+  supporter3_image?: MicroCMSImage;
   supporter4?: string;
+  supporter4_image?: MicroCMSImage;
   supporter5?: string;
+  supporter5_image?: MicroCMSImage;
 };
 
 export type TypeBanner = Banner & MicroCMSContentId & MicroCMSDate;
