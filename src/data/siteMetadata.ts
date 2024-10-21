@@ -23,5 +23,6 @@ export const siteMetadata = {
   facebook: "https://www.facebook.com/smilebliss.zama",
   instagram: "https://www.instagram.com/smile.hm.zama",
   locale: "ja-JP",
-  keywords: "",
+  keywords:
+    "座間谷戸山公園まつり,公園まつり,ハンドメイド,クラフトイベント,フード販売,手作り作家応援,地元活性化,地域の事業者・ボランティア応援,ハンドメイドイベント,座間をもっと盛り上げたい,県立座間谷戸山公園,クリスマスイベント,クリスマスパーティ,アートクラフト,ジュエリー,クリスマススイーツ,エンタメ",
 };
