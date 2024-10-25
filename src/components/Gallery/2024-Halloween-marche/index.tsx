@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ClipTextTitleReversed } from "../Titles/ClipTextTitle";
+import { ClipTextTitleReversed } from "../../Titles/ClipTextTitle";
 import ImageGrid from "./ImageGrid";
 import ImageGridPortrait from "./ImageGridPortrait";
 import { imagesLandscape, imagesPortrait } from "./images";

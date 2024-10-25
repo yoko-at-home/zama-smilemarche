@@ -1,4 +1,4 @@
-import GalleryComponent from "@/components/Gallery";
+import GalleryComponent from "@/components/Gallery/2024-Halloween-marche";
 
 const GalleryPage = () => {
   return (
