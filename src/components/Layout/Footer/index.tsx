@@ -7,29 +7,25 @@ import Instagram from "@/components/icons/instagram.json";
 import Mail from "@/components/icons/mail.json";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
+import { CustomLink } from "../Navigation/CustomLink";
+import { labels } from "../Navigation";
 
 const Footer = () => {
   return (
     <footer className="flex flex-col space-y-10 justify-center m-10">
       <nav className="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
-        <Link className="hover:text-gray-900" href="/">
-          Home
-        </Link>
-        <Link className="hover:text-gray-900" href="/about">
-          About
-        </Link>
-        <Link className="hover:text-gray-900" href="/service">
-          Services
-        </Link>
-        <Link className="hover:text-gray-900" href="/shops">
-          Shops
-        </Link>
-        <Link className="hover:text-gray-900" href="/gallery">
-          Gallery
-        </Link>
-        <Link className="hover:text-gray-900" href="/contact">
-          Contact
-        </Link>
+        {labels.map(({ href, label }) => {
+          return (
+            <CustomLink
+              key={href}
+              href={href}
+              // onClick={handleNavBarOpen}
+              className="hover:text-gray-900"
+            >
+              {label}
+            </CustomLink>
+          );
+        })}
       </nav>
 
       <div className="flex justify-center space-x-5">

@@ -4,13 +4,13 @@ import { CustomLink } from "./CustomLink";
 import { useState } from "react";
 import { siteMetadata } from "@/data/siteMetadata";
 
-const items = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Smile Marche" },
-  { href: "/shops", label: "All Shops" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
-];
+ export const labels = [
+   { href: "/", label: "Home" },
+   { href: "/about", label: "About Smile Marche" },
+   { href: "/shops", label: "All Shops" },
+   { href: "/gallery", label: "Gallery" },
+   { href: "/contact", label: "Contact" },
+ ];
 
 type Props = {
   className?: string;
@@ -53,7 +53,7 @@ export const NavBarMobile: React.FC<Props> = () => {
             onClick={handleNavBarOpen}
           ></button>
           <nav className="z-0 py-8 text-center md:mt-40">
-            {items.map(({ href, label }) => {
+            {labels.map(({ href, label }) => {
               return (
                 <CustomLink
                   key={href}
