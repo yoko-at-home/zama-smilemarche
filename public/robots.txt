@@ -1,0 +1,21 @@
+# Googlebotを許可
+User-agent: Googlebot
+Disallow:
+
+# Bingbotを許可
+User-agent: Bingbot
+Disallow:
+
+# Yahoo Slurpを許可
+User-agent: Slurp
+Disallow:
+
+# DuckDuckBotを許可
+User-agent: DuckDuckBot
+Disallow:
+
+# その他のクローラーをブロック
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.smilemarche.com/sitemap.txt
