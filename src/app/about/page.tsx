@@ -26,7 +26,7 @@ export default function About() {
                 // width="100%"
                 // height="450"
                 src="https://www.youtube.com/embed/sFsUT6agukc?si=k58djGuY1Sb7tm-f"
-                title="第15回 Smile Marche風景"
+                title="第15回 Smile マルシェ風景"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -35,16 +35,16 @@ export default function About() {
               <TitleH1 text="概要" />
               <TitleH2 text="理念" />
               <p>
-                手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、
-                地元活性の一助となるように地域に根ざした活動をします。
+                手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、地元活性の一助となるように地域に根ざした活動をします。
               </p>
-              <TitleH2 text="団体設立の経緯" />
+              <TitleH2 text="- みんなが Smile になれる場所 -" />
               <p>
-                Smile
-                blissは、海老名市、綾瀬市、相模原市、町田市などで開催されているハンドメイドイベントに作家として参加し、沢山の作家さんに出会ってきました。
-                その経験から、作家さんもお客様も座間の方がとても多いことに驚き、また座間市にハンドメイドイベントが無いことを残念に思っている声も多く聞きました。
-                「私たちと同じ想いの方がいるのであれば、個々の力は小さくても、それがひとつになり大きな力になれば出来ないことは無い！」
-                「ハンドメイドで座間をもっと盛り上げたい！」と想い座間で活動している作家さんを中心にハンドメイドイベントを始めました。
+                そんな場所を作りたくて、里山の魅力溢れる県立谷戸山公園を舞台に、Smile
+                marche Zama
+                を始めました。手づくりの温もりや作品を通じて、人と人のつながりを大切にしたい。エシカル
+                &
+                サステナブルなライフスタイルや価値観を提案していきたい。ワークショップを体験して、ものづくりの楽しさを感じてほしい。地域の魅力を再発見していきたい。作家さん同士のコミュニティの場にしてほしい。出店者、来場者、そして私たちスタッフも自然とみんなが笑顔になれる場所、それが「Smile
+                marche Zama」です。
               </p>
             </div>
           </div>

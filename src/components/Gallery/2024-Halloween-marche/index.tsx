@@ -14,7 +14,7 @@ const GalleryComponent = () => {
       {/* ImageGridコンポーネントに画像オブジェクト配列を渡す */}
       <ImageGrid images={imagesLandscape} />
       <ClipTextTitleReversed>
-        動画も見てね → <Link href="/about">Smile Marche</Link>
+        動画も見てね → <Link href="/about">Smile marche Zama</Link>
       </ClipTextTitleReversed>
 
       <ImageGridPortrait images={imagesPortrait} />

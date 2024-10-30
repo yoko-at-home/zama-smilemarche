@@ -1,10 +1,10 @@
 export const siteMetadata = {
   author: "Smile bliss",
-  title: "Smile Marcheイベントのご案内",
-  LogoTitle: "Smile Marche",
-  headerTitle: "Smileマルシェ座間開催のお知らせ",
+  title: "Smile marche Zamaイベントのご案内",
+  LogoTitle: "Smile marche",
+  headerTitle: "Smile marche Zama開催のお知らせ",
   description:
-    "Smile Marcheは、手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、地元活性の一助となるように地域に根ざした活動をします。",
+    "Smile marche Zamaは、手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、地元活性の一助となるように地域に根ざした活動をします。",
   language: "jp-ja",
   siteUrl: "https://smilemarche.com/",
   siteLogo: "/static/favicon_io/favicon-32x32.png",
