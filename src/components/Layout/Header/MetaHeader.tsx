@@ -28,10 +28,11 @@ export function MetaHeader() {
   return (
     <Head>
       {/* SEO metadata */}
+      <metadata />
       <title>{siteMetadata.title}</title>
-      <meta name="description" content={siteMetadata.description} />
       <meta name="keywords" content={siteMetadata.keywords} />
-      <meta name="author" content={siteMetadata.author} />
+      {/* <meta name="description" content={siteMetadata.description} /> */}
+      {/* <meta name="author" content={siteMetadata.author} /> */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* Google Site Verification */}
