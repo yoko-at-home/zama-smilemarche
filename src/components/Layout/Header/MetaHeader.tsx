@@ -27,12 +27,14 @@ export function MetaHeader() {
 
   return (
     <Head>
+      <meta name="theme-color" content="#59B0C4" />
       {/* SEO metadata */}
-      <metadata />
       <title>{siteMetadata.title}</title>
+      <meta property="title" content={siteMetadata.title} />
+      <meta property="description" content={siteMetadata.description} />
+      <meta property="image" content={siteMetadata.siteLogo} />
       <meta name="keywords" content={siteMetadata.keywords} />
-      {/* <meta name="description" content={siteMetadata.description} /> */}
-      {/* <meta name="author" content={siteMetadata.author} /> */}
+      <meta name="author" content={siteMetadata.author} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:type" content="website" />
 

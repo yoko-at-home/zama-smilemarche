@@ -4,6 +4,7 @@ import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
 import { MetaHeader, GTM_ID } from "@/components/Layout/Header/MetaHeader";
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
