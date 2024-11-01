@@ -2,7 +2,7 @@ import "./globals.css";
 
 import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
-import { MetaHeader, GTM_ID } from "@/components/Layout/Header/MetaHeader";
+import { GTM_ID } from "@/components/Layout/Header/MetaHeader";
 
 
 export default function RootLayout({
@@ -12,7 +12,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <MetaHeader />
       <body className="font-mono antialiased">
         {/* Google Tag Manager (noscript) */}
         {GTM_ID && (

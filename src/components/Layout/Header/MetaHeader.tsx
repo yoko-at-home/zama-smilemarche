@@ -3,7 +3,7 @@ import Head from "next/head";
 import type { Metadata } from "next";
 
 import { siteMetadata } from "@/data/siteMetadata";
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -13,9 +13,21 @@ export const metadata: Metadata = {
   keywords: siteMetadata.keywords,
 };
 
+type Props = {
+  title: string;
+  description: string;
+  ImageUrl?: string;
+  ogUrl?: string;
+};
+
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
-export function MetaHeader() {
+export const MetaHeader: FC<Props> = ({
+  title,
+  description,
+  ImageUrl,
+  ogUrl,
+}) => {
   useEffect(() => {
     // TypeScriptの型エラーを防ぐ
     (window as any).dataLayer = (window as any).dataLayer || [];
@@ -24,14 +36,15 @@ export function MetaHeader() {
       event: "gtm.js",
     });
   }, []);
+  const newTitle = `${title} | Smile marche Zama`;
 
   return (
     <Head>
       <meta name="theme-color" content="#59B0C4" />
       {/* SEO metadata */}
-      <title>{siteMetadata.title}</title>
-      <meta property="title" content={siteMetadata.title} />
-      <meta property="description" content={siteMetadata.description} />
+      <title>{newTitle}</title>
+      <meta property="title" content={title} />
+      <meta property="description" content={description} />
       <meta property="image" content={siteMetadata.ogImage} />
       <meta name="keywords" content={siteMetadata.keywords} />
       <meta name="author" content={siteMetadata.author} />
@@ -45,8 +58,8 @@ export function MetaHeader() {
       />
 
       {/* Open Graph (Facebook) */}
-      <meta property="og:title" content={siteMetadata.title} />
-      <meta property="og:description" content={siteMetadata.description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={siteMetadata.ogImage} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
       <meta property="og:type" content="website" />
@@ -54,8 +67,8 @@ export function MetaHeader() {
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@yokoiwasaki6" />
-      <meta name="twitter:title" content={siteMetadata.title} />
-      <meta name="twitter:description" content={siteMetadata.description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={siteMetadata.ogImage} />
 
       {/* Google Tag Manager - Script */}
@@ -76,4 +89,4 @@ export function MetaHeader() {
       )}
     </Head>
   );
-}
+};
