@@ -45,7 +45,7 @@ export function MetaHeader() {
       {/* Open Graph (Facebook) */}
       <meta property="og:title" content={siteMetadata.title} />
       <meta property="og:description" content={siteMetadata.description} />
-      <meta property="og:image" content={siteMetadata.siteLogo} />
+      <meta property="og:image" content={siteMetadata.ogImage} />
       <meta property="og:url" content={siteMetadata.youtube} />
       <meta property="og:type" content={siteMetadata.siteUrl} />
 
@@ -54,7 +54,7 @@ export function MetaHeader() {
       <meta name="twitter:site" content="@yokoiwasaki6" />
       <meta name="twitter:title" content={siteMetadata.title} />
       <meta name="twitter:description" content={siteMetadata.description} />
-      <meta name="twitter:image" content={siteMetadata.siteLogo} />
+      <meta name="twitter:image" content={siteMetadata.ogImage} />
 
       {/* Google Tag Manager - Script */}
       {GTM_ID && (
