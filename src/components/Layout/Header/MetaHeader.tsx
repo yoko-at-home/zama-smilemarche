@@ -34,6 +34,7 @@ export function MetaHeader() {
       {/* <meta name="description" content={siteMetadata.description} /> */}
       {/* <meta name="author" content={siteMetadata.author} /> */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:type" content="website" />
 
       {/* Google Site Verification */}
       <meta
