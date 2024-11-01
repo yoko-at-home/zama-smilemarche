@@ -15,7 +15,7 @@ User-agent: DuckDuckBot
 Disallow:
 
 # その他のクローラーをブロック
-User-agent: *
-Disallow: /
+#User-agent: *
+#Disallow: /
 
 Sitemap: https://www.smilemarche.com/sitemap.txt
