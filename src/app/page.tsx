@@ -21,8 +21,21 @@ import { ShopDepartmentAutoScroll } from "@/components/ShopNameAutoScroll/ShopDe
 import Link from "next/link";
 import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
 import { siteMetadata } from "@/data/siteMetadata";
+import { Metadata } from "next";
 
 export const revalidate = 60;
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    openGraph: {
+      title: siteMetadata.title,
+      description: siteMetadata.description,
+      images: siteMetadata.ogImage,
+    },
+  };
+}
 
 export default async function Home() {
   const toppage = await getBannerList({

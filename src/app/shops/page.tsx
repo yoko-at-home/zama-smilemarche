@@ -11,8 +11,23 @@ import {
   WorkshopDept,
 } from "@/components/ShopList_WithImage";
 import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
+import { Metadata } from "next";
+import { siteMetadata } from "@/data/siteMetadata";
 
 export const revalidate = 60;
+// ISRの再生成時間を設定
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `All shops | ${siteMetadata.title}`,
+    description: siteMetadata.description,
+    openGraph: {
+      title: `All shops | ${siteMetadata.title}`,
+      description: siteMetadata.description,
+      images: siteMetadata.ogImage,
+    },
+  };
+}
 
 export default async function Shops() {
   const data = await getList({

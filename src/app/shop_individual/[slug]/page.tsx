@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getDetail(params.slug);
 
   return {
-    title: data.title,
+    title: `${data.title} | Smile marche Zama`,
     description: data.taste,
     openGraph: {
-      title: data.title,
+      title: `${data.title} | Smile marche Zama`,
       description: data.taste,
       images: [data?.thumbnail?.url || ""],
     },

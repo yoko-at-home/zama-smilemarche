@@ -1,17 +1,8 @@
 "use client";
 import Head from "next/head";
-import type { Metadata } from "next";
-
 import { siteMetadata } from "@/data/siteMetadata";
 import { FC, useEffect } from "react";
 import Script from "next/script";
-
-export const metadata: Metadata = {
-  title: siteMetadata.author,
-  description: siteMetadata.description,
-  openGraph: siteMetadata.openGraph,
-  keywords: siteMetadata.keywords,
-};
 
 type Props = {
   title: string;
@@ -22,18 +13,16 @@ export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export const MetaHeader: FC<Props> = ({ title, description }) => {
   useEffect(() => {
-    // TypeScriptの型エラーを防ぐ
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({
       "gtm.start": new Date().getTime(),
       event: "gtm.js",
     });
   }, []);
-  const newTitle = `${title} | Smile marche Zama`;
 
   return (
     <Head>
-      {/* Google Tag Manager - Script */}
+      {/* Google Tag Manager */}
       {GTM_ID && (
         <Script
           id="gtm-script"
@@ -51,7 +40,7 @@ export const MetaHeader: FC<Props> = ({ title, description }) => {
       )}
       <meta name="theme-color" content="#59B0C4" />
       {/* SEO metadata */}
-      <title>{newTitle}</title>
+      <title>Smile marche Zama | {title}</title>
       <meta property="title" content={title} />
       <meta property="description" content={description} />
       <meta property="image" content={siteMetadata.ogImage} />

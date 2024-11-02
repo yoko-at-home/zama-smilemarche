@@ -3,6 +3,23 @@ import { TitleH1 } from "@/components/Titles/TitleH1";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import TimeLineHistory from "@/components/Timeline";
 import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
+import { Metadata } from "next";
+import { siteMetadata } from "@/data/siteMetadata";
+
+export const revalidate = 60;
+// ISRの再生成時間を設定
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `Smile marche Zamaの思い | ${siteMetadata.title}`,
+    description: siteMetadata.description,
+    openGraph: {
+      title: `Smile marche Zamaの思い | ${siteMetadata.title}`,
+      description: siteMetadata.description,
+      images: siteMetadata.ogImage,
+    },
+  };
+}
 
 export default function About() {
   return (
