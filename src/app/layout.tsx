@@ -2,8 +2,8 @@ import "./globals.css";
 
 import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
-import { GTM_ID } from "@/components/Layout/Header/MetaHeader";
-
+import { GTM_ID, MetaHeader } from "@/components/Layout/Header/MetaHeader";
+import { siteMetadata } from "@/data/siteMetadata";
 
 export default function RootLayout({
   children,
@@ -12,6 +12,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <MetaHeader
+        title={siteMetadata.title}
+        description={siteMetadata.description}
+      />
       <body className="font-mono antialiased">
         {/* Google Tag Manager (noscript) */}
         {GTM_ID && (

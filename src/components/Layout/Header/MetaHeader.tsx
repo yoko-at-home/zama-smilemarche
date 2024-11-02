@@ -16,18 +16,11 @@ export const metadata: Metadata = {
 type Props = {
   title: string;
   description: string;
-  ImageUrl?: string;
-  ogUrl?: string;
 };
 
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
-export const MetaHeader: FC<Props> = ({
-  title,
-  description,
-  ImageUrl,
-  ogUrl,
-}) => {
+export const MetaHeader: FC<Props> = ({ title, description }) => {
   useEffect(() => {
     // TypeScriptの型エラーを防ぐ
     (window as any).dataLayer = (window as any).dataLayer || [];
@@ -40,6 +33,22 @@ export const MetaHeader: FC<Props> = ({
 
   return (
     <Head>
+      {/* Google Tag Manager - Script */}
+      {GTM_ID && (
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}'+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
+      )}
       <meta name="theme-color" content="#59B0C4" />
       {/* SEO metadata */}
       <title>{newTitle}</title>
@@ -60,7 +69,7 @@ export const MetaHeader: FC<Props> = ({
       {/* Open Graph (Facebook) */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={siteMetadata.ogImage} />
+      <meta property="og:image" content={siteMetadata.siteLogo} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
       <meta property="og:type" content="website" />
 
@@ -70,23 +79,6 @@ export const MetaHeader: FC<Props> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={siteMetadata.ogImage} />
-
-      {/* Google Tag Manager - Script */}
-      {GTM_ID && (
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}'+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `,
-          }}
-        />
-      )}
     </Head>
   );
 };
