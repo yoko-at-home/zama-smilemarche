@@ -19,7 +19,6 @@ import {
 } from "@/components/Titles/ClipTextTitle";
 import { ShopDepartmentAutoScroll } from "@/components/ShopNameAutoScroll/ShopDepartmentAutoScroll";
 import Link from "next/link";
-import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
 import { siteMetadata } from "@/data/siteMetadata";
 import { Metadata } from "next";
 
@@ -50,10 +49,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen w-screen">
-      <MetaHeader
-        title={siteMetadata.title}
-        description="Smile marche Zamaのホームページにようこそ！"
-      />
       <div>
         <div
           className="h-96 bg-cover bg-bottom"

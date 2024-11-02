@@ -1,14 +1,13 @@
 import "./globals.css";
-
 import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
-import { GTM_ID } from "@/components/Layout/Header/MetaHeader";
 import { Metadata } from "next";
+import Script from "next/script";
 import { siteMetadata } from "@/data/siteMetadata";
 
 export const revalidate = 60;
-// ISRの再生成時間を設定
 
+// ISRの再生成時間を設定
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${siteMetadata.title}`,
@@ -20,6 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+
+export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export default function RootLayout({
   children,
@@ -40,6 +41,24 @@ export default function RootLayout({
             />
           </noscript>
         )}
+
+        {/* Google Tag Manager (Script) */}
+        {GTM_ID && (
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}'+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${GTM_ID}');
+              `,
+            }}
+          />
+        )}
+
         <NavBarMobile />
         {children}
         <Footer />

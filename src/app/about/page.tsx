@@ -2,7 +2,6 @@ import { TitleH2 } from "@/components/Titles/TitleH2";
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import TimeLineHistory from "@/components/Timeline";
-import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
 import { Metadata } from "next";
 import { siteMetadata } from "@/data/siteMetadata";
 
@@ -26,10 +25,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <MetaHeader
-        title="Smile marche Zamaとは？"
-        description="Smile marche Zamaの思い"
-      />
       <div className="flex justify-center bg-gray-100/90 z-20">
         <div
           className="z-0"

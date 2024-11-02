@@ -1,5 +1,4 @@
 import GalleryComponent from "@/components/Gallery/2024-Halloween-marche";
-import { MetaHeader } from "@/components/Layout/Header/MetaHeader";
 import { siteMetadata } from "@/data/siteMetadata";
 import { Metadata } from "next";
 
@@ -21,7 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
 const GalleryPage = () => {
   return (
     <div>
-      <MetaHeader title="Gallery" description="Halloween回のイベント風景" />
       <GalleryComponent />
     </div>
   );
