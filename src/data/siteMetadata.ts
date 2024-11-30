@@ -1,6 +1,6 @@
 export const siteMetadata = {
   author: "Smile bliss",
-  title: "Smile marche Zama",
+  title: "Smileマルシェ座間",
   LogoTitle: "Smile marche",
   description:
     "Smile marche Zamaは、手作り作家さんや地域の事業者・ボランティア団体などを応援し、活躍できる場所を提供することで、お客様との交流と出会いの場として、地元活性の一助となるように地域に根ざした活動をします。",

@@ -10,9 +10,9 @@ export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `Smile marche Zamaの思い | ${siteMetadata.title}`,
+    title: `Smileマルシェ座間の思い | ${siteMetadata.title}`,
     description:
-      "みんなが Smile になれる場所 - そんな場所を作りたくて、里山の魅力溢れる県立谷戸山公園を舞台に、Smile marche Zamaを始めました。",
+      "みんなが Smile になれる場所 - そんな場所を作りたくて、里山の魅力溢れる県立谷戸山公園を舞台に、Smileマルシェ座間を始めました。",
     openGraph: {
       title: `Smile marche Zamaの思い | ${siteMetadata.title}`,
       description:
