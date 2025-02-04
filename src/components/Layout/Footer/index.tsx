@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="flex justify-center flex-col md:flex-row text-sm text-gray-500">
         <div className="pt-10 flex justify-center items-center mb-3  md:mb-0 md:mr-3">
           お客様専用公式LINE：
-          <a href="https://lin.ee/ebfIoUC" target="_blank">
+          <a href="https://lin.ee/ebfIoUC" target="_blank" rel="noreferrer">
             <img
               src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
               alt="友だち追加"
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="pb-10 flex justify-center items-center md:pt-10 md:pb-0">
           出店者専用公式LINE：
-          <a href="https://lin.ee/u0Ir6bv" target="_blank">
+          <a href="https://lin.ee/u0Ir6bv" target="_blank" rel="noreferrer">
             <img
               src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
               alt="友だち追加"

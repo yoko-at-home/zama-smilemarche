@@ -1,6 +1,6 @@
 import { ShopPageComponent } from "@/components/Shop";
 import { getDetail } from "@/libs/microcms";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 type Props = {
   params: {

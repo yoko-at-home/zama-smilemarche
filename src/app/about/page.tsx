@@ -2,7 +2,7 @@ import { TitleH2 } from "@/components/Titles/TitleH2";
 import { TitleH1 } from "@/components/Titles/TitleH1";
 import SmileBlissImage from "@/components/Layout/Header/SmileBlissImage";
 import TimeLineHistory from "@/components/Timeline";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { siteMetadata } from "@/data/siteMetadata";
 
 export const revalidate = 60;
@@ -42,15 +42,12 @@ export default function About() {
             <div className="  mx-3 sm:mx-12 md:mx-32">
               <iframe
                 className="h-60 md:h-96 w-full"
-                // width="100%"
-                // height="450"
                 src="https://www.youtube.com/embed/sFsUT6agukc?si=k58djGuY1Sb7tm-f"
                 title="第15回 Smile マルシェ風景"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
-                // allowFullScreen
-              ></iframe>
+              />
               <TitleH1 text="概要" />
               <TitleH2 text="理念" />
               <p>

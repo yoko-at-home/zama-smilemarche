@@ -51,7 +51,7 @@ import { siteMetadata } from "@/data/siteMetadata";
              aria-label="toggle modal"
              className="fixed -top-7 h-4/5 w-full cursor-auto focus:outline-none"
              onClick={handleNavBarOpen}
-           ></button>
+           />
            <nav className="z-0 py-8 text-center md:mt-40">
              {labels.map(({ href, label }) => {
                return (

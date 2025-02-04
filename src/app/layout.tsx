@@ -1,7 +1,7 @@
 import "./globals.css";
 import { NavBarMobile } from "@/components/Layout/Navigation";
 import Footer from "@/components/Layout/Footer";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Script from "next/script";
 import { siteMetadata } from "@/data/siteMetadata";
 
@@ -38,6 +38,7 @@ export default function RootLayout({
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
+              title="Google Tag Manager"
             />
           </noscript>
         )}
@@ -47,15 +48,7 @@ export default function RootLayout({
           <Script
             id="gtm-script"
             strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}'+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','${GTM_ID}');
-              `,
-            }}
+            src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
           />
         )}
 

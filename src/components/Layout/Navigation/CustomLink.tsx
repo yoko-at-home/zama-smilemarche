@@ -9,7 +9,7 @@ export const CustomLink = ({ href, ...rest }: CustomLinkProps) => {
   const isAnchorLink = href.startsWith("#");
 
   if (isInternalLink) {
-    return <Link href={href} {...rest}></Link>;
+    return <Link href={href} {...rest} />;
   }
 
   if (isAnchorLink) {

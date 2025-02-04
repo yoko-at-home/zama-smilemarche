@@ -20,7 +20,7 @@ import {
 import { ShopDepartmentAutoScroll } from "@/components/ShopNameAutoScroll/ShopDepartmentAutoScroll";
 import Link from "next/link";
 import { siteMetadata } from "@/data/siteMetadata";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
