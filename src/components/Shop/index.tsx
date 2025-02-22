@@ -1,10 +1,11 @@
 "use client";
 import { formatRichText } from "@/libs/utils";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 import Lottie from "lottie-react";
 import Instagram from "../icons/instagram.json";
-import { Shop } from "@/types";
+import type { Shop } from "@/types";
+import parse from "html-react-parser";
 
 type Props = {
   data: Shop;
@@ -16,7 +17,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
     <main className="flex flex-col items-center">
       <div className="mt-16">
         <div className="relative pt-[9px] px-[9px] mt-4 rounded-t-[35px] shadow-lg w-[350px] h-40 bg-[#e8e8e8] text-gray-700 inset-0 drop-shadow-lg">
-          <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1"></div>
+          <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1" />
           <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] mb-3 font-semibold text-xl shadow-sm">
             {data.title}
           </h1>
@@ -38,15 +39,12 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
                     style={{
                       backgroundImage: `url(${data.thumbnail?.url})`,
                     }}
-                  ></div>
+                  />
                 )}
               </div>
-              <div
-                className="p-3 bg-[#c9c7c7/10] text-gray-600"
-                dangerouslySetInnerHTML={{
-                  __html: `${formatRichText(data.content)}`,
-                }}
-              />
+              <div className="p-3 bg-[#c9c7c7/10] text-gray-600">
+                {parse(data.content)}
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +90,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
               style={{
                 backgroundImage: `url(${data.picture1?.url})`,
               }}
-            ></div>
+            />
           )}
         </div>
         <div className="flex flex-col">
@@ -102,7 +100,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
               style={{
                 backgroundImage: `url(${data.picture2?.url})`,
               }}
-            ></div>
+            />
           )}
         </div>
       </div>

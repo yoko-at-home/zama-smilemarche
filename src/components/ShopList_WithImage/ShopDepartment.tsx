@@ -1,4 +1,4 @@
-import { ShopProps } from "@/types";
+import type { ShopProps } from "@/types";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 import { ShopNameList } from "./ShopNameList";
 
@@ -12,7 +12,7 @@ export const ShopDepartment = ({ shops, category }: ShopDepartmentProps) => {
   const filteredShops = useCategoryFilter(shops ?? [], category);
 
   if (filteredShops.length === 0) {
-    return <p>項目がありません。</p>;
+    return <p>鋭意準備中✨</p>;
   }
 
   return (

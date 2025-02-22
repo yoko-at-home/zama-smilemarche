@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "keen-slider/keen-slider.min.css";
-import { TypeShop } from "@/types";
+import type { TypeShop } from "@/types";
 
 type Props = {
   shop: TypeShop;

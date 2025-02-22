@@ -3,7 +3,7 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect } from "react";
-import { ShopProps } from "@/types";
+import type { ShopProps } from "@/types";
 import ShopNameList from "./ShopNameList";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 
@@ -22,7 +22,7 @@ export const ShopDepartmentAutoScroll = ({
   const filteredShops = useCategoryFilter(shops ?? [], category);
 
   if (filteredShops.length === 0) {
-    return <p>項目がありません。</p>;
+    return <p>鋭意準備中✨</p>;
   }
 
   const [sliderRef, slider] = useKeenSlider<HTMLUListElement>({
@@ -50,7 +50,7 @@ export const ShopDepartmentAutoScroll = ({
   useEffect(() => {
     if (slider) {
       const timer = setInterval(() => {
-        if (slider.current && slider.current.track?.details) {
+        if (slider.current?.track?.details) {
           slider.current.next();
         }
       }, 10000); // 10秒ごとに次のスライドに移動

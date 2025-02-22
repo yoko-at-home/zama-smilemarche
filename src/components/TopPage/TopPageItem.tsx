@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { formatRichText } from "@/libs/utils";
 import { ClipTextTitle, ClipTextTitleReversed } from "../Titles/ClipTextTitle";
-import { TypeBanner } from "@/types";
+import type { TypeBanner } from "@/types";
+import parse from "html-react-parser";
 
 type ToppageProps = {
   banner: TypeBanner;
@@ -45,12 +46,9 @@ export default function TopPageItem({ banner }: ToppageProps) {
           </div>
         </div>
         <div className="w-80 sm:w-96 md:w-2/3 overflow-hidden">
-          <div
-            className="p-3 bg-[#c9c7c7/10] text-gray-600"
-            dangerouslySetInnerHTML={{
-              __html: banner.content ? formatRichText(banner.content) : "",
-            }}
-          />
+          <div className="p-3 bg-[#c9c7c7/10] text-gray-600">
+            {banner.content ? parse(banner.content) : ""}
+          </div>
         </div>
       </div>
       <div className="mb-5 mt-3 sm:ml-3">

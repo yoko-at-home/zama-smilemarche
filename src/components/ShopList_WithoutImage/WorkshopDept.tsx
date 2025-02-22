@@ -1,4 +1,4 @@
-import { Shop, ShopProps, } from "@/types";
+import type { Shop, ShopProps } from "@/types";
 import ShopNameListItem from "../ShopNameListItem";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 

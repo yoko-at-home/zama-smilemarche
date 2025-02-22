@@ -1,4 +1,4 @@
-import { TypeShop } from "@/types";
+import type { TypeShop } from "@/types";
 import Link from "next/link";
 
 type Props = {
