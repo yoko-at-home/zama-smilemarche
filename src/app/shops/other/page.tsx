@@ -15,7 +15,7 @@ export default async function OtherPage() {
   const data = await getList({
     limit: LIMIT,
   });
-      const filteredData = data.contents.filter((item) => item.join !== false);
+      const filteredData = data.contents.filter((item) => item.join !== true);
       return (
         <main className="flex min-h-screen flex-col items-center pb-24">
           <div className="px-5 md:px-20">
@@ -23,12 +23,12 @@ export default async function OtherPage() {
               <ClipTextTitleReversed>
                 Healing...癒しどころ
               </ClipTextTitleReversed>
-              <EnterpriseDept shops={filteredData} />
+              <MassageDept shops={filteredData} />
             </div>
             <div className="mt-10">
               <div className={styles.box}>
-                {/* <TitleH2 text="Others" /> */}
-                <MassageDept shops={filteredData} />
+                <ClipTextTitleReversed>その他</ClipTextTitleReversed>
+                <EnterpriseDept shops={filteredData} />
               </div>
             </div>
           </div>

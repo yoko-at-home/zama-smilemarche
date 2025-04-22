@@ -10,7 +10,7 @@ export default async function WorkshopPage() {
   const data = await getList({
     limit: LIMIT,
   });
-      const filteredData = data.contents.filter((item) => item.join !== false);
+      const filteredData = data.contents.filter((item) => item.join !== true);
 
       return (
         <main className="flex min-h-screen flex-col items-center pb-24">

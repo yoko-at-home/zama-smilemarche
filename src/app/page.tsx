@@ -45,7 +45,7 @@ export default async function Home() {
     limit: LIMIT,
   });
 
-  const filteredData = data.contents.filter((item) => item.join !== false);
+  const filteredData = data.contents.filter((item) => item.join !== true);
 
   return (
     <main className="min-h-screen w-screen">

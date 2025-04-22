@@ -11,16 +11,17 @@ export default async function KitchenCarPage() {
   const data = await getList({
     limit: LIMIT,
   });
-      const filteredData = data.contents.filter((item) => item.join !== false);
+  // join の値に関係なく全ての店舗を表示する
+  const filteredData = data.contents;
 
-      return (
-        <main className="flex min-h-screen flex-col items-center pb-24">
-          <div className="px-5 md:px-20">
-            <div className={styles.box}>
-              <ClipTextTitleReversed>キッチンカー</ClipTextTitleReversed>
-              <KitchenCar shops={filteredData} />
-            </div>
-          </div>
-        </main>
-      );
+  return (
+    <main className="flex min-h-screen flex-col items-center pb-24">
+      <div className="px-5 md:px-20">
+        <div className={styles.box}>
+          <ClipTextTitleReversed>キッチンカー</ClipTextTitleReversed>
+          <KitchenCar shops={filteredData} />
+        </div>
+      </div>
+    </main>
+  );
 }

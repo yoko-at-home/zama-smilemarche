@@ -10,7 +10,7 @@ import {
   MassageDept,
   WorkshopDept,
 } from "@/components/ShopList_WithImage";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { siteMetadata } from "@/data/siteMetadata";
 
 export const revalidate = 60;
@@ -32,7 +32,8 @@ export default async function Shops() {
   const data = await getList({
     limit: LIMIT,
   });
-  const filteredData = data.contents.filter((item) => item.join !== false);
+  // join の値に関係なく全ての店舗を表示する
+  const filteredData = data.contents;
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pb-24">
