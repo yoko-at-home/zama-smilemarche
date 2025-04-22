@@ -7,6 +7,7 @@ import type {
 // タグの型定義
 export type Tag = {
   name: string;
+  id: string;
 } & MicroCMSContentId &
   MicroCMSDate;
 
@@ -16,13 +17,14 @@ export type Shop = {
   ingtagram: string;
   ingtagram2?: string;
   taste?: string;
-  category: Tag[];
+  category: Tag;
   content: string;
   join: boolean;
   thumbnail?: MicroCMSImage;
   picture1?: MicroCMSImage;
   picture2?: MicroCMSImage;
 };
+
 export type TypeShop = Shop & MicroCMSContentId & MicroCMSDate;
 
 // Toppageの型定義
