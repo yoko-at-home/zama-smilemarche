@@ -11,6 +11,13 @@ type Props = {
   data: Shop;
 };
 
+const getInstagramUrl = (username: string) => {
+  if (username.startsWith("http")) {
+    return username;
+  }
+  return `https://www.instagram.com/${username.replace("@", "")}`;
+};
+
 // ショップ個別ページ
 export const ShopPageComponent: FC<Props> = ({ data }) => {
   return (
@@ -51,7 +58,11 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
         {/* Instagram starts */}
         {!data.ingtagram ? null : (
           <div className="flex flex-row">
-            <Link href={data.ingtagram} target="_blank">
+            <Link
+              href={getInstagramUrl(data.ingtagram)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
                 <Lottie
                   animationData={Instagram}
