@@ -10,12 +10,12 @@ const ImageGridPortrait: React.FC<ImageGridProps> = ({ images }) => {
   return (
     <div className="p-4">
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-11 gap-4">
-        {images.map((image, index) => (
+        {images.map((image) => (
           <FadeInImage
-            key={index}
+            key={image.url}
             src={image.url}
-            alt={`Image ${index + 1}`}
-            index={index}
+            alt={`Image ${image.url}`}
+            index={images.indexOf(image)}
           />
         ))}
       </div>
@@ -32,7 +32,7 @@ const FadeInImage: React.FC<{ src: string; alt: string; index: number }> = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className={`relative aspect-w-9 aspect-h-16 overflow-hidden`}>
+    <div className="relative aspect-w-9 aspect-h-16 overflow-hidden">
       <Image
         src={src}
         alt={alt}

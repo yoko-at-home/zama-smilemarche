@@ -12,10 +12,10 @@ const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
         {images.map((image, index) => (
           <FadeInImage
-            key={index}
+            key={image.url}
             src={image.url}
-            alt={`Image ${index + 1}`}
-            index={index}
+            alt={`Image ${image.url}`}
+            index={images.indexOf(image)}
           />
         ))}
       </div>
@@ -32,7 +32,7 @@ const FadeInImage: React.FC<{ src: string; alt: string; index: number }> = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className={`relative aspect-w-16 aspect-h-9 overflow-hidden`}>
+    <div className="relative aspect-w-16 aspect-h-9 overflow-hidden">
       <Image
         src={src}
         alt={alt}
