@@ -1,5 +1,5 @@
-import { Banner, Shop } from "@/types";
-import { createClient, MicroCMSQueries } from "microcms-js-sdk";
+import type { Banner, Shop } from "@/types";
+import { createClient, type MicroCMSQueries } from "microcms-js-sdk";
 import { notFound } from "next/navigation";
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -24,6 +24,7 @@ export const getList = async (queries?: MicroCMSQueries) => {
       queries,
     })
     .catch(notFound);
+
   return listData;
 };
 
