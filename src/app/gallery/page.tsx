@@ -1,6 +1,6 @@
 import GalleryComponent from "@/components/Gallery/2024-Halloween-marche";
 import { siteMetadata } from "@/data/siteMetadata";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 // ISRの再生成時間を設定
