@@ -25,7 +25,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
       <div className="mt-16">
         <div className="relative pt-[9px] px-[9px] mt-4 rounded-t-[35px] shadow-lg w-[350px] h-40 bg-[#e8e8e8] text-gray-700 inset-0 drop-shadow-lg">
           <div className="absolute inset-0 pointer-events-none bg-gray-[#93a1a1]/20 rounded-t-md p-1" />
-          <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-x-scroll h-16 text-[#aeaaaa] mb-3 font-semibold text-xl shadow-sm">
+          <h1 className="flex flex-col justify-center text-center bg-black rounded-t-[30px] overflow-clip h-16 text-[#aeaaaa] mb-3 font-semibold text-xl shadow-sm">
             {data.title}
           </h1>
           <p className="flex flex-col justify-center text-center font-semibold text-md h-14 drop-shadow-md items-center  mt-3 text-gray-600  bg-[#93a1a1]/20">
@@ -33,7 +33,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
           </p>
         </div>
         <div>
-          <div className="relative pt-[9px] px-[9px] shadow-lg w-[350px] h-[800px] bg-[#e8e8e8] inset-0 drop-shadow-lg overflow-scroll">
+          <div className="relative pt-[9px] px-[9px] shadow-lg w-[350px] h-[800px] bg-[#e8e8e8] inset-0 drop-shadow-lg overflow-clip">
             <div className="absolute inset-3 pointer-events-none">
               <div className="flex flex-col">
                 {!data.thumbnail?.url ? (
@@ -69,7 +69,7 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
                   className="h-12 w-12"
                   loop={true}
                 />
-                <span className="flex justify-start h-6 overflow-x-scroll w-[200px]">
+                <span className="flex justify-start h-6 overflow-clip w-[200px]">
                   {data.ingtagram.replace("https://www.instagram.com/", "")}
                 </span>
               </span>
