@@ -46,6 +46,11 @@ export default function Supporters({ banners }: SupporterProps) {
             </div>
           )} */}
         </li>
+        <li className=" flex flex-col md:flex-row justify-between items-center">
+          {banners.supporter3 && (
+            <p className="ml-3 whitespace-nowrap mb-3">{banners.supporter3}</p>
+          )}
+        </li>
         {/* ここから画像 */}
         <div>
           {banners.supporter1_image && (
