@@ -54,10 +54,10 @@ export default async function Shops() {
           <TitleH2 text="Craft" />
           <CraftDept shops={filteredData} />
         </div>
-        <div className={styles.box}>
+        {/* <div className={styles.box}>
           <TitleH2 text="Enterprise" />
           <EnterpriseDept shops={filteredData} />
-        </div>
+        </div> */}
         <div className={styles.box}>
           <TitleH2 text="Others" />
           <MassageDept shops={filteredData} />
