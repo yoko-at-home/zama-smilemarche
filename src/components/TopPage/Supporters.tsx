@@ -79,6 +79,8 @@ export default function Supporters({ banners }: SupporterProps) {
                 height={banners.supporter3_image.height}
                 width={banners.supporter3_image.width}
                 alt={banners.supporter3 || "Supporter 3"}
+                unoptimized={true}
+                priority={true}
               />
             </div>
           )}
