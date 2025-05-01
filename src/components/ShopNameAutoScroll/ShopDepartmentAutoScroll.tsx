@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect } from "react";
 import type { ShopProps } from "@/types";
-import ShopNameList from "./ShopNameList";
+import { ShopNameList } from "./ShopNameList";
 import { useCategoryFilter } from "@/hooks/useCategoryFilter";
 
 const animation = { duration: 5000, easing: (t: number) => t };
