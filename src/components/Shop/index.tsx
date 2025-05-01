@@ -75,7 +75,11 @@ export const ShopPageComponent: FC<Props> = ({ data }) => {
               </span>
             </Link>
             {!data.ingtagram2 ? null : (
-              <Link href={data.ingtagram2} target="_blank">
+              <Link
+                href={getInstagramUrl(data.ingtagram2)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="flex justify-center px-5 py-3 items-center bg-gray-50 m-5 rounded-full drop-shadow-sm">
                   <Lottie
                     animationData={Instagram}
