@@ -67,7 +67,7 @@ export default async function Home() {
           <div className="pl-10 pb-3">
             <ClipTextTitle>
               🚚 キッチンカー 🚚
-              <Link href="/shops/kitchencar">→motto✨</Link>
+              <Link href="/shops/kitchencar">→more✨</Link>
             </ClipTextTitle>
           </div>
           <div className="flex flex-col items-center justify-center sm:p-6">
@@ -80,7 +80,7 @@ export default async function Home() {
               <div className="pb-3">
                 <ClipTextTitle>
                   美味しいお店が集結🔥
-                  <Link href="/shops/food">→motto✨</Link>
+                  <Link href="/shops/food">→more✨</Link>
                 </ClipTextTitle>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default async function Home() {
               <div className="pb-3">
                 <ClipTextTitle>
                   🔥情熱が止まらない
-                  <Link href="/shops/entertainment">→motto✨</Link>
+                  <Link href="/shops/entertainment">→more✨</Link>
                 </ClipTextTitle>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default async function Home() {
               <div className="pb-3">
                 <ClipTextTitle>
                   楽しく、作っちゃおう♪
-                  <Link href="/shops/workshop">→motto✨</Link>
+                  <Link href="/shops/workshop">→more✨</Link>
                 </ClipTextTitle>
               </div>
             </div>
@@ -129,14 +129,14 @@ export default async function Home() {
               <div className="pb-3">
                 <ClipTextTitle>
                   素敵な作家さんたちとの出会い
-                  <Link href="/shops/craft">→motto✨</Link>
+                  <Link href="/shops/craft">→more✨</Link>
                 </ClipTextTitle>
               </div>
             </div>
           </div>
         </div>
         <ClipTextTitleReversed>
-          ❤️ Healing ❤️ <Link href="/shops/other">→motto✨</Link>
+          ❤️ Healing ❤️ <Link href="/shops/other">→more✨</Link>
         </ClipTextTitleReversed>
         <div className={styles.border}>
           <div className="flex flex-col items-center justify-center sm:p-6">
