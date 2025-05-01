@@ -1,4 +1,4 @@
-import { SupporterProps } from "@/types";
+import type { SupporterProps } from "@/types";
 import Image from "next/image";
 
 export default function Supporters({ banners }: SupporterProps) {
@@ -67,6 +67,18 @@ export default function Supporters({ banners }: SupporterProps) {
                 height={banners.supporter2_image.height}
                 width={banners.supporter2_image.width}
                 alt={banners.supporter2}
+              />
+            </div>
+          )}
+        </div>
+        <div>
+          {banners.supporter3_image && (
+            <div className="w-36 mt-10">
+              <Image
+                src={banners.supporter3_image.url}
+                height={banners.supporter3_image.height}
+                width={banners.supporter3_image.width}
+                alt={banners.supporter3 || "Supporter 3"}
               />
             </div>
           )}

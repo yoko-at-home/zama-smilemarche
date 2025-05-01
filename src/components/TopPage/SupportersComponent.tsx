@@ -1,4 +1,4 @@
-import { SupporterProps } from "@/types";
+import type { SupporterProps } from "@/types";
 import Supporters from "./Supporters";
 
 export const SupportersComponent = ({ banners }: SupporterProps) => {
