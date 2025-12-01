@@ -6,7 +6,7 @@ import { imagesLandscape, imagesPortrait } from "./images";
 
 const ChristmasGalleryComponent = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-red-600 to-gray-900 py-20">
+    <div className="bg-gradient-to-b from-red-900 via-red-700 to-red-900 py-20">
       <div className="flex flex-col items-center justify-center">
         <ClipTextTitleReversed>Merry Christmas!!</ClipTextTitleReversed>
         <ClipTextTitleReversed>❤️ 素敵なクリスマスを ❤️</ClipTextTitleReversed>
