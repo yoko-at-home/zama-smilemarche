@@ -1,4 +1,6 @@
 export const imagesLandscape = [
+  { url: "/static/img/marche/19th-christmas/landscape/IMG_3537.jpeg" },
+  { url: "/static/img/marche/19th-christmas/landscape/IMG_3492.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3422.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3423.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3424.jpeg" },
@@ -54,7 +56,6 @@ export const imagesLandscape = [
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3486.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3487.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3488.jpeg" },
-  { url: "/static/img/marche/19th-christmas/landscape/IMG_3492.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3493.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3495.jpeg" },
   { url: "/static/img/marche/19th-christmas/landscape/IMG_3496.jpeg" },
