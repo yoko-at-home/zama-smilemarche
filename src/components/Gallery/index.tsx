@@ -4,7 +4,9 @@ import HalloweenGalleryComponent from "./2024-Halloween-marche";
 import ChristmasGalleryComponent from "./2025-Christmas-marche";
 
 const GalleryComponent = () => {
-  const [activeTab, setActiveTab] = useState<"halloween" | "christmas">("halloween");
+  const [activeTab, setActiveTab] = useState<"halloween" | "christmas">(
+    "christmas"
+  );
 
   return (
     <div className="bg-gray-900">
